@@ -71,7 +71,7 @@
                 <p class="mb-4 text-sm text-black">Especially great deals on some of the all-time greats</p>
                 <div class="overflow-hidden">
                     <div id="discountGamesCarousel" class="carousel flex transition-opacity duration-500">
-                        @foreach($popularGames as $game)
+                        @foreach($discountedGames as $game)
                             <div class="discount-item flex-shrink-0 cursor-pointer relative">
                                 <a class="min-w-full" href="/game/details/{{$game->id}}">
                                     <div class="carousel-card min-w-full relative">
@@ -182,12 +182,12 @@
         function showDiscountSlide(index) {
             const carousel = document.getElementById('discountGamesCarousel');
             const items = carousel.children;
-            const totalItems = Math.ceil(items.length / 3);
+            const totalItems = items.length - 3;
 
             const prevDiscountButton = document.getElementById('prevDiscountButton');
             const nextDiscountButton = document.getElementById('nextDiscountButton');
 
-            if (index > totalItems + 5) {
+            if (index > totalItems + 1) {
                 discountIndex = totalItems;
             } else if (index < 0) {
                 discountIndex = 0;
@@ -196,7 +196,7 @@
             }
 
             prevDiscountButton.disabled = discountIndex === 0;
-            nextDiscountButton.disabled = discountIndex === totalItems + 1;
+            nextDiscountButton.disabled = discountIndex === totalItems;
 
             const offset = (-discountIndex * 100 / 3);
             carousel.style.opacity = '0';

@@ -13,6 +13,14 @@ class FriendController extends Controller
         $user_1 = User::find(auth()->user()->id);
         $user_2 = User::where('id', $request->id)->first();
 
+        if($user_1->received_friend_requests->contains('user_id_1', $user_2->id) || $user_1->sent_friend_requests->contains('user_id_2', $user_2->id)){
+            return redirect()->back();
+        }
+
+        if($user_1->friends_with->contains($user_2->id) || $user_1->friends_of->contains($user_2->id)){
+            return redirect()->back();
+        }
+
         $friend_request = new FriendRequest();
         $friend_request->user_id_1 = $user_1->id;
         $friend_request->user_id_2 = $user_2->id;
@@ -24,6 +32,11 @@ class FriendController extends Controller
 
     public function cancelRequest(Request $request){
         $friend_request = FriendRequest::where('user_id_1', auth()->user()->id)->where('user_id_2', $request->id)->first();
+
+        if (!$friend_request) {
+            return redirect()->back();
+        }
+
         $friend_request->delete();
 
         return redirect()->back();
@@ -31,6 +44,11 @@ class FriendController extends Controller
 
     public function declineFriendRequest(Request $request){
         $friend_request = FriendRequest::where('user_id_1', $request->id)->where('user_id_2', auth()->user()->id)->first();
+
+        if (!$friend_request) {
+            return redirect()->back();
+        }
+
         $friend_request->delete();
 
         return redirect()->back();
@@ -38,6 +56,11 @@ class FriendController extends Controller
 
     public function acceptFriendRequest(Request $request){
         $friend_request = FriendRequest::where('user_id_1', $request->id)->where('user_id_2', auth()->user()->id)->first();
+
+        if (!$friend_request) {
+            return redirect()->back();
+        }
+
         $friend_request->delete();
 
         $friendlist = new Friendlist();

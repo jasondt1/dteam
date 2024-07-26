@@ -153,6 +153,18 @@
                     $review = Auth::user()->game_reviews->where('game_id', $game->id)->first();
                 @endphp
                 <h1 class="label-content text-base">You reviewed this game on <span class="review-date">{{$review->created_at}}</span></h1>
+                <div class="flex flex-col gap-2 my-1">
+                    <div class="flex items-center gap-2" style="background-color: rgba(0, 0, 0, 0.2)">
+                        <img src={{$review->rating_type->image_url}} alt="">
+                        @if($review->rating_type_id == 1)
+                            <span>Recommended</span>
+                        @endif
+                        @if($review->rating_type_id == 2)
+                        <span>Not Recommended</span>
+                    @endif
+                    </div>
+                    <p class="label2 text-sm">{{$review->content}}</p>
+                </div>
             </div>
         </div>
         @endif

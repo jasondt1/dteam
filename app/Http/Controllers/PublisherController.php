@@ -67,7 +67,7 @@ class PublisherController extends Controller
     public function welcome(){
         $publisher = Publisher::where('user_id', Auth::user()->id)->first();
         if($publisher){
-            return redirect()->route('store');
+            return redirect()->route('manage-game');
         }
         else{
             return view('publisher/profiles/publisher-welcome');
