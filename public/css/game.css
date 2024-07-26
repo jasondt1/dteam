@@ -1,0 +1,100 @@
+body {
+    background-color: #1e2837;
+    color: white;
+}
+
+.profile-top {
+    background-color: #2c333e;
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.profile-top img {
+    width: 60px;
+    height: 60px;
+    border: #91989f 2px solid;
+}
+
+.game-card {
+    background-color: #18202c;
+    display: flex;
+    gap: 1rem;
+}
+
+.game-card img {
+    width: 250px;
+    height: 120px;
+}
+
+.store-btn {
+    background-color: #4b9df8;
+    max-width: max-content;
+    padding: 0.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.store-btn:hover {
+    background-color: #54b8f9;
+}
+
+.tabination {
+    border-bottom: 6px solid #4f7a99;
+}
+
+.tab-left {
+    display: flex;
+    gap: 6px;
+}
+
+.active {
+    background: linear-gradient(to bottom, #5aa9d6 5%, #417b9c 95%);
+    padding: 0.5rem 1.2rem;
+    border-radius: 3px 3px 0 0;
+    margin-top: auto;
+}
+
+.not-active {
+    background-color: #121821;
+    padding: 0.3rem 1.2rem;
+    border-radius: 3px 3px 0 0;
+    margin-top: auto;
+    color: #dadada;
+}
+
+.not-active:hover {
+    background-color: #446481;
+    color: white;
+}
+
+.recent-title {
+    border-bottom: 1px solid #4a5e7c;
+}
+
+.review-card {
+    background: linear-gradient(to right, #323a45, #586370);
+    display: flex;
+    gap: 1rem;
+}
+
+.review-card img {
+    width: 200px;
+    height: 100px;
+}
+
+.review-type {
+    background: linear-gradient(to right, #363e47, #48515c);
+}
+
+.review-type img {
+    width: 50px;
+    height: 50px;
+}
+
+.right {
+    background-color: #1b242e;
+}

@@ -1,0 +1,146 @@
+body {
+    background: url("https://community.akamai.steamstatic.com/public/images/friends/colored_body_top2.png?v=2");
+    background-repeat: no-repeat;
+    background-color: #1b2838;
+    background-position: center top;
+    color: white;
+    position: relative;
+    /* background-size: cover; */
+}
+
+.friend-container {
+    background: url("https://community.akamai.steamstatic.com/public/images/bg_highlight.png");
+    background-position: center top -210px;
+}
+
+.profile-border {
+    border: #91989f 2px solid;
+}
+
+.profile-border-2 {
+    border: #91989f 1px solid;
+}
+
+.profile-border-right {
+    border-right: #91989f 3px solid;
+}
+
+.side-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.selected:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input-container {
+    background-color: #12354b;
+    width: max-content;
+    padding: 0.4rem;
+    padding-left: 0.6rem;
+    width: 100%;
+    border: 1px solid #2d5978;
+    border-radius: 5px;
+}
+
+.input-container input {
+    background-color: #12354b;
+    outline: none;
+    color: #7791a3;
+    width: 100%;
+}
+
+.search-friend input::placeholder {
+    font-style: italic;
+    color: #7791a3;
+}
+
+.input-code-container {
+    background-color: #243543;
+    width: max-content;
+    padding: 0.4rem;
+    padding-left: 0.6rem;
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.input-code-container input {
+    background-color: #243543;
+    outline: none;
+    color: #969696;
+    width: 100%;
+}
+
+.search-code input::placeholder {
+    font-style: italic;
+    color: #969696;
+}
+
+.friend-card {
+    cursor: pointer;
+}
+
+.friend-card:hover {
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+.friend-circle {
+    display: block;
+    border: 2px solid #9b9b9b;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 15px;
+    margin-left: 0.5rem;
+}
+
+.btn {
+    color: #7cbeef;
+    background-color: #7cbdef29;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #7cbdefa0;
+}
+
+.disabled-btn {
+    color: #474d57;
+    background-color: #323b46;
+}
+
+@property --color1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #6abdfa;
+}
+
+@property --color2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #355ec9;
+}
+
+.copy-btn {
+    background: linear-gradient(to right, var(--color1), var(--color2));
+    color: white;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: --color1 0.5s, --color2 0.5s;
+}
+
+.copy-btn:hover {
+    --color1: #6abdfa;
+    --color2: #4b85dd;
+    color: white;
+}

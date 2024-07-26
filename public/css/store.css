@@ -1,0 +1,65 @@
+body {
+    background: url("https://cdn.akamai.steamstatic.com/store/promo/summer2024/summer2024_tile_bg.png");
+    background-repeat: repeat;
+    color: white;
+    position: relative;
+    background-color: #212530;
+}
+
+.carousel-main-img {
+    min-width: 626px;
+    height: 352px;
+    /* object-fit: cover; */
+}
+
+.carousel-left {
+    min-width: 620px;
+    height: 160px;
+}
+
+.carousel-side-img {
+    width: 155px;
+    height: 80px;
+}
+
+.game-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 328px;
+    gap: 0.5rem;
+}
+
+.carousel-card {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.discount-section {
+    background: linear-gradient(to right, rgb(244, 219, 193), #f1c08b);
+}
+
+.discount-item img {
+    height: 100%;
+}
+
+.discount-item {
+    width: calc(33% - 7px);
+    margin: 0 5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

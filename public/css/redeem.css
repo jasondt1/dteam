@@ -1,0 +1,53 @@
+body {
+    background: url("https://store.akamai.steamstatic.com/public/images//v6/temp/cluster_bg_2.png");
+    background-position: center top -210px;
+    background-repeat: no-repeat;
+    background-color: #1e2837;
+    color: white;
+    position: relative;
+}
+
+.cart-modal {
+    border-top: 1.5px solid;
+    border-image: linear-gradient(to right, #5699e7, #335cc7) 1;
+    background: linear-gradient(to right, #35393f, #26282d);
+    min-width: 40rem;
+}
+
+.cart-modal-container {
+    background-color: #1c1e22ce;
+    margin: auto;
+}
+
+.cart-modal-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.cart-modal-content img {
+    width: 200px;
+    height: 100px;
+}
+
+.cart-modal-right {
+    margin-top: -2.5rem;
+}
+
+.field {
+    background-color: #121821;
+    filter: drop-shadow(1px 1px 1px #48556a);
+}
+
+.continue-btn {
+    color: #7cbeef;
+    background-color: #7cbdef29;
+}
+
+.continue-btn:hover {
+    color: white;
+    background-color: #7cbdefa0;
+}
+
+.invalid-bg {
+    background: linear-gradient(to right, #daa23d, #774815);
+}

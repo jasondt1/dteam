@@ -1,0 +1,102 @@
+body {
+    background-color: #1b2838;
+    color: white;
+    position: relative;
+    background-image: url("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/page_bg_generated_v6b.jpg?t=1717088796");
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1b2838;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.cart-modal {
+    border-top: 1.5px solid;
+    border-image: linear-gradient(to right, #5699e7, #335cc7) 1;
+    background: linear-gradient(to right, #35393f, #26282d);
+    min-width: 40rem;
+}
+
+.cart-modal-container {
+    background-color: #1c1e2288;
+    margin: auto;
+}
+
+.cart-modal-content img {
+    width: 200px;
+    height: 100px;
+}
+
+.cart-modal-right {
+    margin-top: -2.5rem;
+}
+
+select {
+    background-color: #2a313b;
+    color: white;
+}
+
+.select {
+    background-color: #2a313b;
+    color: white;
+}
+
+.select:hover {
+    background-color: #464d58;
+}
+
+.friend-card {
+    background-color: #26282d;
+    border: 2px solid #24262a;
+    border-radius: 2px;
+}
+
+.friend-card:hover {
+    background-color: #3a3f48;
+    border: 2px solid #41464f;
+    filter: drop-shadow(0.2px 0.2px 1px #000000);
+}
+
+.disabled-card {
+    background-color: #24272c;
+    border: 2px solid #31363f;
+    border-radius: 2px;
+    cursor: default;
+}
+
+.disabled-card:hover {
+    background-color: #25282e;
+    border: 2px solid #41464f;
+}
+
+.pic {
+    border: 2px solid #393c42;
+    filter: drop-shadow(0.2px 0.2px 3px #000000);
+}
+
+.friend-modal {
+    border-top: 1.5px solid;
+    border-image: linear-gradient(to right, #5699e7, #335cc7) 1;
+    background: linear-gradient(to right, #35393f, #26282d);
+    min-width: 40rem;
+    height: 80vh;
+}
+
+.friends-container {
+    overflow-y: scroll;
+    height: 92%;
+}
+
+@media (max-width: 700px) {
+    .friend-modal {
+        min-width: 90vw;
+    }
+}

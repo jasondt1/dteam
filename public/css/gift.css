@@ -1,0 +1,47 @@
+body {
+    background-repeat: no-repeat;
+    background-color: #1b2838;
+    background-position: center top;
+    color: white;
+    position: relative;
+    /* background-size: cover; */
+}
+
+.profile-top {
+    background-color: #2c333e;
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.profile-top img {
+    width: 60px;
+    height: 60px;
+    border: #91989f 2px solid;
+}
+
+.game-card {
+    background-color: #18202c;
+    display: flex;
+    gap: 1rem;
+}
+
+.game-card img {
+    width: 250px;
+    height: 120px;
+}
+
+.store-btn {
+    background-color: #4b9df8;
+    max-width: max-content;
+    padding: 0.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-weight: 500;
+    border-radius: 3px;
+}
+
+.store-btn:hover {
+    background-color: #54b8f9;
+}

@@ -1,0 +1,116 @@
+body {
+    position: relative;
+    margin: 0;
+    background-color: #181d24;
+    background-image: url("https://community.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg");
+}
+/*
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 180%;
+    height: 180%;
+    background-image: url("https://techgage.com/wp-content/uploads/2022/08/Playnite-Library-Screen.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%) rotate(330deg);
+    filter: blur(1px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    background-color: rgba(24, 29, 36, 0.97);
+    background: linear-gradient(
+        to right,
+        rgba(24, 29, 36, 1),
+        rgba(24, 29, 36, 0.5),
+        rgba(24, 29, 36, 1)
+    );
+    z-index: -1;
+} */
+
+.form {
+    background-color: #181a20;
+    min-width: 300px;
+}
+
+.field-bg {
+    background-color: #33353b;
+}
+
+.label-blue {
+    color: #4897f7;
+}
+
+.img-container {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .img-container {
+        width: 0;
+    }
+    .form {
+        padding-right: 2rem;
+        background-color: transparent;
+    }
+    body {
+        background-image: url("https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg");
+    }
+}
+
+.custom-checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: #d1d5db;
+}
+
+.checkbox-label .checkmark {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #32353c;
+    background-color: #32353c;
+    border-radius: 4px;
+    position: relative;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.custom-checkbox-input:checked + .checkbox-label .checkmark {
+    background-color: #32353c;
+    border-color: #32353c;
+}
+
+.custom-checkbox-input:checked + .checkbox-label .checkmark::after {
+    content: "";
+    position: absolute;
+    top: 43.4%;
+    left: 50%;
+    width: 0.37rem;
+    height: 0.78rem;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}

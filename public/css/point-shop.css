@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(to right, #1b2330, #2b406b, #1c2432);
+    color: white;
+    background-color: #1b2330;
+}
+
+.top-container {
+    background-color: #1f232d;
+    z-index: -999;
+}
+
+.hero-section {
+    display: flex;
+}
+
+.main-bg {
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        black,
+        rgba(0, 0, 0, 0.2) 70%
+    );
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.2) 70%);
+}
+
+.blue-gradient {
+    background: linear-gradient(to right, #92b0df, #eff6fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 2px #92b0df;
+}
+
+.item-card {
+    background-color: #1d3051;
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+
+.image-bg {
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(to bottom right, #1f3150, #2d3f6b);
+}
+
+.item-card:hover {
+    filter: drop-shadow(3px 5px 6px rgb(0, 0, 0));
+}
+
+.avatar-modal {
+    background: url("https://store.akamai.steamstatic.com/public/images/applications/store/diamonds_tile.png?v=6fbc929dbce0612e8e1d8e3a3749ac6d");
+    background-color: #181d24;
+    border-top: 1.5px solid;
+    border-image: linear-gradient(to right, #5699e7, #335cc7) 1;
+    width: 51rem;
+}
+
+.background-modal {
+    background: url("https://store.akamai.steamstatic.com/public/images/applications/store/diamonds_tile.png?v=6fbc929dbce0612e8e1d8e3a3749ac6d");
+    background-color: #181d24;
+    border-top: 1.5px solid;
+    border-image: linear-gradient(to right, #5699e7, #335cc7) 1;
+    width: 60rem;
+}
+
+.purchase-btn {
+    background: linear-gradient(to right, #5699e7, #345dc8);
+    color: #c9e0f5;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.purchase-btn:hover {
+    background: linear-gradient(to right, #6abcf9, #4880da);
+    color: #cde1f0;
+}
+
+.cancel-btn {
+    background-color: #3e444f;
+    border-radius: 4px;
+}
+
+.cancel-btn:hover {
+    background-color: #474d57;
+}

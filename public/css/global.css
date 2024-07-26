@@ -1,0 +1,124 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    max-width: 1024px;
+    min-height: 90vh;
+    margin: auto;
+}
+
+.disable-btn {
+    background: gray;
+    color: #cccccc;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: default;
+}
+
+.blue-btn {
+    background: linear-gradient(to right, #5aa0eb, #355ec9);
+    color: #c9e0f5;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.blue-btn:hover {
+    background: linear-gradient(to right, #6abdfa, #4b85dd);
+    color: white;
+}
+
+.green-btn {
+    background: linear-gradient(to right, #82ae3e, #648931);
+    color: #d8eeb0;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.green-btn:hover {
+    background: linear-gradient(to right, #9ed44d, #77a43b);
+    color: white;
+}
+
+.white-btn {
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: white;
+    color: rgb(35, 35, 35);
+}
+
+.white-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.bg-1 {
+    background-color: #191d23;
+}
+
+.bg-2 {
+    background-color: #222429;
+}
+
+.owned-decoration {
+    background-color: #acce41;
+    left: -10px;
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+
+::-webkit-scrollbar {
+    height: 12px;
+    width: 14px;
+    background: transparent;
+    z-index: 12;
+    overflow: visible;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: #434953;
+    border-radius: 10px;
+    z-index: 12;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    transition: background-color 0.32s ease-in-out;
+    margin: 4px;
+    min-height: 32px;
+    min-width: 32px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4e5157;
+}
+
+::-webkit-scrollbar-corner {
+    background: #202020;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #2a2a2a;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 2s linear infinite;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

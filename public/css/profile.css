@@ -1,0 +1,124 @@
+body {
+    background-color: #000000;
+    color: white;
+    position: relative;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/ce5d466e49827ccd94c616ebca4839a4a25dfbd6.gif?alt=media&token=f40a7ee4-efcd-4616-817f-e0aa210ce318");
+    background-position: center top 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-container {
+    min-height: 100vh;
+    background-color: rgba(24, 24, 24, 0.86);
+}
+
+.profile-top {
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+}
+
+.profile-pic img {
+    border: #91989f 1px solid;
+}
+
+.friends-pic {
+    border: #91989f 1px solid;
+}
+
+.profile-top-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #cecfcf;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    max-width: max-content;
+}
+
+.profile-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.left {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding-bottom: 1.25rem;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.right {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding-bottom: 1.25rem;
+    display: flex;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    flex-direction: column;
+}
+
+.recent {
+    background: rgba(0, 0, 0, 0.548);
+    border-radius: 3px;
+    padding: 0.7rem 1rem;
+}
+
+.game-card {
+    background-color: rgba(0, 0, 0, 0.548);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 3px;
+    display: flex;
+    gap: 1rem;
+}
+
+.game-card img {
+    width: 200px;
+    height: 80px;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.circle {
+    display: block;
+    border: 2px solid #9b9b9b;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 16px;
+    margin-left: 0.5rem;
+}
+
+.friend-circle {
+    display: block;
+    border: 2px solid #9b9b9b;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 15px;
+    margin-left: 0.5rem;
+}
+
+.friend-card:hover {
+    background-color: #3a3a3a;
+}
+
+.no-underline a:hover {
+    text-decoration: none;
+}

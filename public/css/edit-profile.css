@@ -1,0 +1,139 @@
+body {
+    background: linear-gradient(to bottom, #262b30, #1d1e20);
+    background: #262b30;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+@property --color1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #6abdfa;
+}
+
+@property --color2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #355ec9;
+}
+
+.profile-top {
+    background-color: #2e333a;
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.profile-top img {
+    width: 60px;
+    height: 60px;
+    border: #91989f 2px solid;
+}
+
+.active {
+    background-color: #3e444f;
+    color: white;
+}
+
+.link {
+    padding-left: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.3s ease;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #3e444f;
+    z-index: -1;
+    transition: left 0.3s ease;
+}
+
+.link:hover::before {
+    left: 0;
+}
+
+.link:hover {
+    color: white;
+}
+
+input {
+    background-color: #191b1e;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 4px;
+    height: 40px;
+}
+
+select {
+    background-color: #191b1e;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 4px;
+    height: 40px;
+}
+
+textarea {
+    background-color: #191b1e;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 4px;
+}
+
+.save-btn {
+    background: linear-gradient(to right, var(--color1), var(--color2));
+    color: white;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: --color1 0.5s, --color2 0.5s;
+}
+
+.save-btn:hover {
+    --color1: #6abdfa;
+    --color2: #4b85dd;
+    color: white;
+}
+
+.cancel-btn {
+    background: #3e444f;
+    color: #dcdfe2;
+    text-shadow: 0.5px 0.5px black;
+    text-decoration: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.cancel-btn:hover {
+    background: #474d57;
+    color: white;
+}
+
+.error-msg {
+    background: linear-gradient(to right, #721d16, #3a2a25);
+}
+
+.imgs {
+    transition: transform 0.2s ease;
+}
+
+.imgs:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
