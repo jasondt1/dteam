@@ -117,14 +117,44 @@ function navigateTo(url) {
         clearTimeout(hideCategoryTimeout);
     });
 
-    $('#search-field').on('input', function(){
+    $('#search-field').on('input', function() {
         let resultContainer = $('.result-container');
-        if(this.value.length < 2){
+        if (this.value.length < 3) {
             resultContainer.empty().fadeOut(150);
             return;
         }
         let query = this.value;
-
-
+        $.ajax({
+            url: "/search/game-async/" + query,
+            method: "GET",
+            success: function(response) {
+                resultContainer.empty();
+                let count = 0;
+                response.forEach(element => {
+                    count++;
+                    if (count > 5) {
+                        return;
+                    }
+                    let price = element.price;
+                    let value = parseInt(price, 10).toLocaleString("id-ID");
+                    let rpPrice = "Rp " + value;
+                    if (price == 0) {
+                        rpPrice = "Free";
+                    }
+                    let gameItem = `
+                    <div class="${element.owned ? "game-item-owned" : "game-item"} flex gap-2" onclick='navigateTo("/game/details/${element.id}")'>
+                        <div class="w-24 h-10 w-1/4">
+                            <img src="${element.game_images[0].image_url}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col w-3/4 justify-center">
+                            <p class="text-[13px] font-semibold truncate">${element.title}</p>
+                            <p class="text-[13px]">${rpPrice}</p>
+                        </div>
+                    </div>`;
+                    resultContainer.append(gameItem);
+                });
+                resultContainer.stop(true, true).fadeIn(150);
+            }
+        });
     });
 </script>
