@@ -51,7 +51,7 @@
             <input type="hidden" name="original_price" id="original_price" value="{{ old('original_price') }}">
         </div>
         <div class="flex flex-col">
-            <label for="discount_percentage" class="text-gray-300 text-sm">Discount Percentage (Optional)</label>
+            <label for="discount_percentage" class="text-gray-300 text-sm">Discount Percentage</label>
             <input type="text" name="discount_percentage" id="discount_percentage" class="w-full md:max-w-80 h-9 rounded-sm field-bg px-3 text-white @error('discount_percentage') border border-[#C15755] @enderror" value={{ old('discount_percentage') }}>
         </div>
         <div class="flex flex-col @error('age_rating') border border-[#C15755] @enderror">
