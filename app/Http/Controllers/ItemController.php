@@ -35,6 +35,11 @@ class ItemController extends Controller
         $itemLibrary->user_id = $user->id;
         $itemLibrary->save();
 
-        return redirect()->route('edit-profile-avatar');
+        if($item->type == 'background'){
+            return redirect()->route('edit-profile-background');
+        } else {
+            return redirect()->route('edit-profile-avatar');
+        }
+
     }
 }
