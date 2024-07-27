@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Jul 2024 pada 08.02
+-- Waktu pembuatan: 27 Jul 2024 pada 10.30
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -876,33 +876,38 @@ CREATE TABLE IF NOT EXISTS `items` (
   `type` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` bigint(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=334 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `items`
 --
 
 INSERT INTO `items` (`id`, `created_at`, `updated_at`, `name`, `image_url`, `type`, `price`) VALUES
-(7, '2024-07-11 23:40:58', '2024-07-11 23:40:58', 'Meow Mail', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fmeow_mail.gif?alt=media&token=3f79d8e7-2267-469c-8e6d-5c45e547f9f7', 'background', 2000),
-(8, '2024-07-11 23:40:58', '2024-07-11 23:40:58', 'Ashen Hush', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1', 'background', 2000),
-(9, '2024-07-11 23:40:58', '2024-07-11 23:40:58', 'Gestu Clan Estate', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fgestu_clan_estate.gif?alt=media&token=1ae819e7-d64e-4700-a3ef-d2a0c3be33a1', 'background', 2000),
-(10, '2024-07-11 23:40:58', '2024-07-11 23:40:58', 'Cat Courier', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2855140/18201b6931880d3bcb863fc3f5f5d0f3889f5c68.gif', 'avatar', 1000),
-(11, '2024-07-11 23:40:58', '2024-07-11 23:40:58', 'Cicini', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/400910/8d405acf455855d778515064e91880c67fffff50.gif', 'avatar', 1000),
-(12, '2024-07-11 23:40:58', '2024-07-11 23:40:58', 'Rambus Play', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1944060/3c6e22e1856a08f4f1d7ee8dec21d7a28bb56eb2.gif', 'avatar', 1000),
-(13, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Neener', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1097150/2fb8fd91cbdc6f8a3f630579a0ee479d5c22505f.gif', 'avatar', 1000),
-(14, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Wave', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1097150/c33beb91c02f1a2c9b2d3e8d820d3f5be0b08b06.gif', 'avatar', 1000),
-(15, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Gained Knowledge', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/03e6938ae269d5fb3c83f6c56e1469b36171ad44.gif', 'avatar', 1000),
-(16, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Broadened Horizons', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/c59f1f3beafa934af92b51dcd0521298600239fb.gif', 'avatar', 1000),
-(17, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Pollo', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055500/9fa2a22c70382fcc6658728d23759d1fa36bd61f.gif', 'avatar', 100000),
-(18, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Cat Face', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1529220/a8ba0e6ab807cd1f9dbe24f3958242e2d989e8c6.gif', 'avatar', 1000),
-(19, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Ghost', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1658150/10280a18601f222faad9f1ff6ef0922e1fb446a5.gif', 'avatar', 1000),
-(20, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Supply Depletion Koishi', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1684100/6ca57220d4dbb1fc7a6e620221f78328ed409db0.gif', 'avatar', 1000),
-(21, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'The World', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fthe_world.gif?alt=media&token=a1dfc4e7-fbd6-44bd-a12e-7f754bbb09f1', 'background', 2000),
-(22, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Oko Background', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Foko_background.gif?alt=media&token=13dcf4d2-4d83-4f78-9805-aee9dae59e1c', 'background', 2000),
-(23, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Spooky Mascots', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fspooky_mascots.gif?alt=media&token=b04160fc-0e94-4148-aa50-e0f241085417', 'background', 2000),
-(24, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Animated Green Background', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fanimated_green_background.gif?alt=media&token=54ced592-8956-4728-a2c9-338a17f72250', 'background', 2000),
-(25, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'The Crossroads', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fthe_crossroads.gif?alt=media&token=1be77948-d1d2-49b8-b0c6-d0605428134b', 'background', 2000),
-(26, '2024-07-26 22:14:54', '2024-07-26 22:14:54', 'Bubble Blue', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fbubble_blue.gif?alt=media&token=e1637127-b8f4-4a8b-8da3-a2aaab7bbf18', 'background', 2000);
+(309, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Cat Courier', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2855140/18201b6931880d3bcb863fc3f5f5d0f3889f5c68.gif', 'avatar', 1000),
+(310, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Cicini', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/400910/8d405acf455855d778515064e91880c67fffff50.gif', 'avatar', 1000),
+(311, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Rambus Play', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1944060/3c6e22e1856a08f4f1d7ee8dec21d7a28bb56eb2.gif', 'avatar', 1000),
+(312, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Neener', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1097150/2fb8fd91cbdc6f8a3f630579a0ee479d5c22505f.gif', 'avatar', 1000),
+(313, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Wave', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1097150/c33beb91c02f1a2c9b2d3e8d820d3f5be0b08b06.gif', 'avatar', 1000),
+(314, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Gained Knowledge', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/03e6938ae269d5fb3c83f6c56e1469b36171ad44.gif', 'avatar', 1000),
+(315, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Broadened Horizons', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/c59f1f3beafa934af92b51dcd0521298600239fb.gif', 'avatar', 1000),
+(316, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Pollo', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055500/9fa2a22c70382fcc6658728d23759d1fa36bd61f.gif', 'avatar', 100000),
+(317, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Cat Face', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1529220/a8ba0e6ab807cd1f9dbe24f3958242e2d989e8c6.gif', 'avatar', 1000),
+(318, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Ghost', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1658150/10280a18601f222faad9f1ff6ef0922e1fb446a5.gif', 'avatar', 1000),
+(319, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Supply Depletion Koishi', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1684100/6ca57220d4dbb1fc7a6e620221f78328ed409db0.gif', 'avatar', 1000),
+(320, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Neon Face', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/788100/8454554bc0a8bb82ac3991002fb71801b17596ff.gif', 'avatar', 1000),
+(321, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Hellebore', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1574580/02a88fe40be3642793b1b574f378ef24e0372b8e.gif', 'avatar', 1000),
+(322, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'The Red Crown', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1313140/b5a0bd8b9bea4e1bd4773c9c3c0c8c1465b7340d.gif', 'avatar', 1000),
+(323, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Doggie', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1476970/0f353f8171916feebeb7f2bc44acba6310b73ef0.gif', 'avatar', 1000),
+(324, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Cat', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1332010/e7a8496874fe44a3c773c46ab1e8b886f71035e8.jpg', 'background', 2000),
+(325, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'SHHHHH!', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/945360/380202f367adc87ef2900f1d96d7dfa4cbc413ab.jpg', 'background', 2000),
+(326, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Hero', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2161700/05ed1962c04f5fbbca0788664b81725a92e9273c.jpg', 'background', 2000),
+(327, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Mute', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/359550/8115fa76fc2e5759f041e9490aabfb636d1e6fad.jpg', 'background', 2000),
+(328, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'The World', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fthe_world.gif?alt=media&token=a1dfc4e7-fbd6-44bd-a12e-7f754bbb09f1', 'background', 2000),
+(329, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Oko Background', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Foko_background.gif?alt=media&token=13dcf4d2-4d83-4f78-9805-aee9dae59e1c', 'background', 2000),
+(330, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Glitch Sansui-Zu', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1465680/ee46cc3b6988057d435be7e391472d46f278d87a.jpg', 'background', 2000),
+(331, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Hartman', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fhartman.gif?alt=media&token=165e01f7-3fc8-440a-918d-7e23fce4e38f', 'background', 2000),
+(332, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Original Box Art', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/275850/f9fd22144df3cffec574b31f14d44151551980c8.png', 'background', 2000),
+(333, '2024-07-27 00:34:52', '2024-07-27 00:34:52', 'Rainy Day Greenhouse', 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Frainy_day_greenhouse.gif?alt=media&token=01f892e9-b6e0-440a-98cd-76d1c227d686', 'background', 2000);
 
 -- --------------------------------------------------------
 
@@ -920,19 +925,24 @@ CREATE TABLE IF NOT EXISTS `item_libraries` (
   PRIMARY KEY (`id`),
   KEY `item_libraries_item_id_foreign` (`item_id`),
   KEY `item_libraries_user_id_foreign` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `item_libraries`
 --
 
 INSERT INTO `item_libraries` (`id`, `created_at`, `updated_at`, `item_id`, `user_id`) VALUES
-(1, '2024-07-13 01:26:09', '2024-07-13 01:26:09', 12, 5),
-(2, '2024-07-13 01:37:38', '2024-07-13 01:37:38', 11, 5),
-(3, '2024-07-13 01:50:24', '2024-07-13 01:50:24', 10, 5),
-(4, '2024-07-13 01:51:48', '2024-07-13 01:51:48', 8, 5),
-(5, '2024-07-13 01:51:53', '2024-07-13 01:51:53', 9, 5),
-(6, '2024-07-13 02:56:58', '2024-07-13 02:56:58', 7, 5);
+(19, '2024-07-27 00:35:23', '2024-07-27 00:35:23', 328, 5),
+(20, '2024-07-27 00:35:39', '2024-07-27 00:35:39', 323, 5),
+(21, '2024-07-27 00:35:45', '2024-07-27 00:35:45', 315, 5),
+(22, '2024-07-27 00:36:05', '2024-07-27 00:36:05', 317, 5),
+(23, '2024-07-27 00:36:11', '2024-07-27 00:36:11', 319, 5),
+(24, '2024-07-27 00:36:20', '2024-07-27 00:36:20', 312, 5),
+(25, '2024-07-27 00:36:51', '2024-07-27 00:36:51', 321, 5),
+(26, '2024-07-27 00:36:55', '2024-07-27 00:36:55', 320, 5),
+(27, '2024-07-27 00:37:17', '2024-07-27 00:37:17', 333, 5),
+(28, '2024-07-27 00:37:21', '2024-07-27 00:37:21', 327, 5),
+(29, '2024-07-27 00:37:25', '2024-07-27 00:37:25', 325, 5);
 
 -- --------------------------------------------------------
 
@@ -1092,7 +1102,7 @@ INSERT INTO `users` (`id`, `created_at`, `updated_at`, `nickname`, `real_name`, 
 (2, '2024-07-08 21:58:16', '2024-07-26 02:49:39', NULL, NULL, 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'tanuartadjason@gmail.com', '$2y$10$e/X8WB114szUx2QuXmPwIuYIT5lm36p8HvnVQO6r2bVE7h396y7rW', 'publisher', NULL, '4567890123', NULL, 0, 1000, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', 'A3eNC2CMlVUxPQx9xJTaFHlHrt1joR6tkphn70L3Sqnm7PFQTBNcxijUSURS'),
 (3, '2024-07-08 22:14:54', '2024-07-08 22:14:54', 'jasondt', NULL, 'https://avatars.akamai.steamstatic.com/af1cf9cf15be50bc6eda5a5c35bb1698bbf77ecd_full.jpg', 'tanuartadjason@gmail.com', '$2y$10$DCtA6PbAvdhU2whKAlQF0OQvOgQXHY8yRdOOOqigJRwHHE1H562k6', 'publisher', NULL, '3456789012', NULL, 0, 1000, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
 (4, '2024-07-08 22:14:54', '2024-07-08 22:14:54', NULL, NULL, 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'jason@gmail.com', '$2y$10$0nHWP2l0JyY09a1i6t3B3eEEk6w0ZQ.wVIN9RaKEFgntY8hURAqwm', 'admin', NULL, '2345678901', NULL, 0, 1000, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
-(5, '2024-07-08 23:07:47', '2024-07-25 08:28:51', 'jasondt', 'Jason Daniel', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1944060/3c6e22e1856a08f4f1d7ee8dec21d7a28bb56eb2.gif', 'dteamslc@gmail.com', '$2y$10$95DAtIuHgcJrU2BNp.yKdOQK9tNDtFXJNFnDnVgJ1C/Ach.C.yEbS', 'user', NULL, '1234567890', 17, 16688034, 89840, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fmeow_mail.gif?alt=media&token=3f79d8e7-2267-469c-8e6d-5c45e547f9f7', NULL),
+(5, '2024-07-08 23:07:47', '2024-07-27 01:17:04', 'jasondt', 'Jason Daniel', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/c59f1f3beafa934af92b51dcd0521298600239fb.gif', 'dteamslc@gmail.com', '$2y$10$95DAtIuHgcJrU2BNp.yKdOQK9tNDtFXJNFnDnVgJ1C/Ach.C.yEbS', 'user', NULL, '1234567890', 17, 16688034, 54840, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Frainy_day_greenhouse.gif?alt=media&token=01f892e9-b6e0-440a-98cd-76d1c227d686', NULL),
 (6, '2024-07-14 23:21:00', '2024-07-15 03:16:48', 'user2', 'useruser', 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'zukari151@gmail.com', '$2y$10$tlREhPhFtJCeeuHO0EmKuOvajg5pLv2KH4mkie7w9APlxChllh0BC', 'user', 'ds', '0227658205', 18, 0, 0, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
 (7, '2024-07-16 00:46:57', '2024-07-16 00:46:57', NULL, NULL, NULL, 'rickywijayaplay@gmail.com', '$2y$10$YNKoilmgjbQh9YmbNjTlLeWeQPylzGvh8nyog9ulyhizvYh..94u2', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, NULL),
 (8, '2024-07-16 03:17:45', '2024-07-16 03:18:09', 'user3', 'useruser', 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'miyukisaber@gmail.com', '$2y$10$BZb6NDuMYx7F0/n3esfJOua5olPeTVVPOIN5cU8aNnYzhduTdvSIe', 'user', NULL, '4012941475', 29, 0, 0, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),

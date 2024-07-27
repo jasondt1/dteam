@@ -27,6 +27,7 @@ class GameController extends Controller
         $query->with('genres');
 
         $games = $query->get();
+        $games = $games->sortByDesc('released_date');
 
         return view('publisher/games/manage-game', ['games' => $games]);
     }

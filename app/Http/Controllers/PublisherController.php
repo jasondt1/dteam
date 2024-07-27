@@ -146,6 +146,7 @@ class PublisherController extends Controller
     public function showPublisher($name){
         $publisher = Publisher::where('name', $name)->first();
         $games = $publisher->games;
+        $games = $games->sortByDesc('released_date');
         foreach ($games as $game) {
             $positive = 0;
             $negative = 0;
