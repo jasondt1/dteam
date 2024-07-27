@@ -51,5 +51,91 @@ class ItemSeeder extends Seeder
             'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1944060/3c6e22e1856a08f4f1d7ee8dec21d7a28bb56eb2.gif',
             'price' => 1000
         ]);
+
+        Item::create([
+            'name' => 'Neener',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1097150/2fb8fd91cbdc6f8a3f630579a0ee479d5c22505f.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Wave',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1097150/c33beb91c02f1a2c9b2d3e8d820d3f5be0b08b06.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Gained Knowledge',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/03e6938ae269d5fb3c83f6c56e1469b36171ad44.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Broadened Horizons',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/c59f1f3beafa934af92b51dcd0521298600239fb.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Pollo',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055500/9fa2a22c70382fcc6658728d23759d1fa36bd61f.gif',
+            'price' => 100000
+        ]);
+        Item::create([
+            'name' => 'Cat Face',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1529220/a8ba0e6ab807cd1f9dbe24f3958242e2d989e8c6.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Ghost',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1658150/10280a18601f222faad9f1ff6ef0922e1fb446a5.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Supply Depletion Koishi',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1684100/6ca57220d4dbb1fc7a6e620221f78328ed409db0.gif',
+            'price' => 1000
+        ]);
+
+        Item::create([
+            'name' => 'The World',
+            'type' => 'background',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fthe_world.gif?alt=media&token=a1dfc4e7-fbd6-44bd-a12e-7f754bbb09f1',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'Oko Background',
+            'type' => 'background',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Foko_background.gif?alt=media&token=13dcf4d2-4d83-4f78-9805-aee9dae59e1c',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'Spooky Mascots',
+            'type' => 'background',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fspooky_mascots.gif?alt=media&token=b04160fc-0e94-4148-aa50-e0f241085417',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'Animated Green Background',
+            'type' => 'background',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fanimated_green_background.gif?alt=media&token=54ced592-8956-4728-a2c9-338a17f72250',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'The Crossroads',
+            'type' => 'background',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fthe_crossroads.gif?alt=media&token=1be77948-d1d2-49b8-b0c6-d0605428134b',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'Bubble Blue',
+            'type' => 'background',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fbubble_blue.gif?alt=media&token=e1637127-b8f4-4a8b-8da3-a2aaab7bbf18',
+            'price' => 2000
+        ]);
     }
 }

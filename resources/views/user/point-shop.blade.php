@@ -41,7 +41,7 @@
         <div class="flex gap-3 flex-wrap justify-center md:justify-start">
             @foreach($avatars as $avatar)
             <div class="item-card w-44 h-60 relative cursor-pointer">
-                <div class="w-full h-44 flex items-center image-bg"><img class="w-full" style="border-radius: 5px 5px 0 0" src={{$avatar->image_url}} alt="" onclick="showModal('{{$avatar->id}}', '{{$avatar->name}}' , '{{$avatar->image_url}}', 'background', '{{$avatar->price}}')">
+                <div class="w-full h-44 flex items-center image-bg"><img loading="lazy" class="w-full" style="border-radius: 5px 5px 0 0" src={{$avatar->image_url}} alt="" onclick="showModal('{{$avatar->id}}', '{{$avatar->name}}' , '{{$avatar->image_url}}', 'background', '{{$avatar->price}}', {{Auth::user() && Auth::user()->item_libraries->contains($avatar->id)}})">
                 </div>
                 <div class="p-2">
                     <p class="uppercase text-xs text-[#C6CAD6] tracking-wider">{{$avatar->name}}</p>
@@ -50,6 +50,12 @@
                         <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt=""></div>
                         <span class="number">{{$avatar->price}}</span>
                     </div>
+                    @if(Auth::user() && Auth::user()->item_libraries->contains($avatar->id))
+                    <div class="absolute bottom-2 left-2 tracking-wider text-[#DAE8F0] text-xs flex items-center gap-1">
+                        <div class="w-4 h-4 flex">
+                            <img class="w-full h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/800px-Eo_circle_green_checkmark.svg.png" alt=""></div>
+                    </div>
+                    @endif
                 </div>
             </div>
             @endforeach
@@ -59,8 +65,8 @@
         <p class="text-center mb-2 md:mb-0 md:text-left">Profile Backgrounds</p>
         <div class="flex gap-3 flex-wrap justify-center md:justify-start">
             @foreach($backgrounds as $background)
-            <div class="item-card w-44 h-60 relative cursor-pointer" onclick="showBackgroundModal('{{$background->id}}','{{$background->name}}' , '{{$background->image_url}}', 'background', '{{$background->price}}')">
-                <div class="w-full h-44 flex items-center image-bg"><img class="w-full px-2" src={{$background->image_url}} alt="">
+            <div class="item-card w-44 h-60 relative cursor-pointer" onclick="showBackgroundModal('{{$background->id}}','{{$background->name}}' , '{{$background->image_url}}', 'background', '{{$background->price}}', {{Auth::user() && Auth::user()->item_libraries->contains($background->id)}})">
+                <div class="w-full h-44 flex items-center image-bg"><img class="w-full px-2" loading="lazy" src={{$background->image_url}} alt="">
                 </div>
                 <div class="p-2">
                     <p class="uppercase text-xs text-[#C6CAD6] tracking-wider">{{$background->name}}</p>
@@ -69,6 +75,12 @@
                         <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt=""></div>
                         <span class="number">{{$background->price}}</span>
                     </div>
+                    @if(Auth::user() && Auth::user()->item_libraries->contains($background->id))
+                    <div class="absolute bottom-2 left-2 tracking-wider text-[#DAE8F0] text-xs flex items-center gap-1">
+                        <div class="w-4 h-4 flex">
+                            <img class="w-full h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/800px-Eo_circle_green_checkmark.svg.png" alt=""></div>
+                    </div>
+                    @endif
                 </div>
             </div>
             @endforeach
@@ -97,11 +109,28 @@
                 <img id="avatar-image" class="absolute top-[10%] left-[3%] w-[28%] aspect-square" src="" alt="">
                 <img id="avatar-image2" class="absolute top-[47%] left-[33%] w-[15%] aspect-square" src="" alt="">
             </div>
-            <div class="flex justify-end gap-2">
-                <a id="avatar-purchase-btn" class="purchase-btn text-sm py-3 px-5 cursor-pointer flex items-center gap-1.5">                    <div class="w-5 h-5">
-                <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt="">
-            </div> <span id="avatar-price" class="text-lg tracking-wider"></span></a>
-            <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeModal()">Cancel</p>
+            <div class="flex justify-end gap-2" id="avatar-not-owned">
+                <div class="flex gap-2">
+                    <a id="avatar-purchase-btn" class="purchase-btn text-sm py-3 px-5 cursor-pointer flex items-center gap-1.5">                    <div class="w-5 h-5">
+                        <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt="">
+                    </div> <span id="avatar-price" class="text-lg tracking-wider"></span></a>
+                    <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeModal()">Cancel</p>
+                </div>
+            </div>
+            <div class="flex justify-between gap-2" id="avatar-owned">
+                <p class="font-semibold mt-4">You Owned this item.</p>
+                <div class="flex gap-2">
+                    <a class="green-btn text-sm py-3 px-5 cursor-pointer flex items-center gap-1.5">
+                        <span onclick="navigate('/edit-profile/avatar')" class="text-lg tracking-wider ml-1">Edit My Avatar</span>
+                    </a>
+                    <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeModal()">Cancel</p>
+                </div>
+            </div>
+            <div class="flex justify-between gap-2" id="avatar-insufficient">
+                <p class="font-semibold mt-4">Insufficient Points.</p>
+                <div class="flex gap-2">
+                    <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeModal()">Close</p>
+                </div>
             </div>
         </div>
     </div>
@@ -128,47 +157,96 @@
                 <img class="w-full absolute" style="z-index: 1" src="https://store.akamai.steamstatic.com/public/images/applications/store/background_preview.png?v=5a9bc2bea24a73b7800d442e16c6071e" alt="">
                 <img id="background-image" class="w-full absolute top-[0.5rem] px-1" src="" alt="">
             </div>
-            <div class="flex justify-end gap-2 mt-[50%]">
-                <a id="background-purchase-btn" class="purchase-btn text-sm py-3 px-5 cursor-pointer flex items-center gap-1.5">
-                    <div class="w-5 h-5">
-                        <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt="">
-                    </div>
-                    <span id="background-price" class="text-lg tracking-wider"></span>
-                </a>
-                <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeBackgroundModal()">Cancel</p>
+            <div class="flex justify-end gap-2 mt-[50%]" id="background-not-owned">
+                <div class="flex gap-2">
+                    <a id="background-purchase-btn" class="purchase-btn text-sm py-3 px-5 cursor-pointer flex items-center gap-1.5">
+                        <div class="w-5 h-5">
+                            <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt="">
+                        </div>
+                        <span id="background-price" class="text-lg tracking-wider"></span>
+                    </a>
+                    <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeBackgroundModal()">Cancel</p>
+                </div>
+            </div>
+            <div class="flex justify-between gap-2 mt-[50%]" id="background-owned">
+                <p class="font-semibold mt-4">You Owned this item.</p>
+                <div class="flex gap-2">
+                    <a class="green-btn text-sm py-3 px-5 cursor-pointer flex items-center gap-1.5">
+                        <span onclick="navigate('/edit-profile/background')" class="text-lg tracking-wider ml-1">Edit My Background</span>
+                    </a>
+                    <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeBackgroundModal()">Close</p>
+                </div>
+            </div>
+            <div class="flex justify-between gap-2 mt-[50%]" id="background-insufficient">
+                <p class="font-semibold mt-4">Insufficient Points.</p>
+                <div class="flex gap-2">
+                    <p id="cancel" class="py-3 px-5 cursor-pointer cancel-btn text-lg" onclick="closeBackgroundModal()">Close</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
-
 <script>
-    function showModal(id, title, image, type, price) {
+    function showModal(id, title, image, type, price, owned) {
+        document.body.style.overflow = "hidden";
         document.getElementById("avatarModal").classList.remove("hidden");
-            document.getElementById("avatar-image").src = image;
-            document.getElementById("avatar-image2").src = image;
-            document.getElementById("avatar-title").textContent = title;
-            document.getElementById("avatar-purchase-btn").href = "/point/purchase/" + id;
-            let currentPrice = parseFloat(price);
-            value = parseInt(currentPrice, 10).toLocaleString("en-US");
-            document.getElementById("avatar-price").textContent = value + " Points";
+        document.getElementById("avatar-image").src = image;
+        document.getElementById("avatar-image2").src = image;
+        document.getElementById("avatar-title").textContent = title;
+        document.getElementById("avatar-purchase-btn").href = "/point/purchase/" + id;
+        let currentPrice = parseFloat(price);
+        let value = parseInt(currentPrice, 10).toLocaleString("en-US");
+        document.getElementById("avatar-price").textContent = value + " Points";
+        if (owned) {
+            document.getElementById("avatar-owned").classList.remove("hidden");
+            document.getElementById("avatar-not-owned").classList.add("hidden");
+            document.getElementById("avatar-insufficient").classList.add("hidden");
+        } else if (!owned && parseInt(price) > {{Auth::user()->point}}) {
+            document.getElementById("avatar-insufficient").classList.remove("hidden");
+            document.getElementById("avatar-not-owned").classList.add("hidden");
+            document.getElementById("avatar-owned").classList.add("hidden");
+        } else {
+            document.getElementById("avatar-owned").classList.add("hidden");
+            document.getElementById("avatar-not-owned").classList.remove("hidden");
+            document.getElementById("avatar-insufficient").classList.add("hidden");
+        }
     }
 
-    function closeModal(){
+    function closeModal() {
+        document.body.style.overflow = "auto";
         document.getElementById("avatarModal").classList.add("hidden");
     }
 
-    function showBackgroundModal(id, title, image, type, price) {
+    function showBackgroundModal(id, title, image, type, price, owned) {
+        document.body.style.overflow = "hidden";
         document.getElementById("backgroundModal").classList.remove("hidden");
-            document.getElementById("background-image").src = image;
-            document.getElementById("background-title").textContent = title;
-            document.getElementById("background-purchase-btn").href = "/point/purchase/" + id;
-            let currentPrice = parseFloat(price);
-            value = parseInt(currentPrice, 10).toLocaleString("en-US");
-            document.getElementById("background-price").textContent = value + " Points";
+        document.getElementById("background-image").src = image;
+        document.getElementById("background-title").textContent = title;
+        document.getElementById("background-purchase-btn").href = "/point/purchase/" + id;
+        let currentPrice = parseFloat(price);
+        let value = parseInt(currentPrice, 10).toLocaleString("en-US");
+        document.getElementById("background-price").textContent = value + " Points";
+        if (owned) {
+            document.getElementById("background-owned").classList.remove("hidden");
+            document.getElementById("background-not-owned").classList.add("hidden");
+            document.getElementById("background-insufficient").classList.add("hidden");
+        } else if (!owned && parseInt(price) > {{Auth::user()->point}}) {
+            document.getElementById("background-insufficient").classList.remove("hidden");
+            document.getElementById("background-not-owned").classList.add("hidden");
+            document.getElementById("background-owned").classList.add("hidden");
+        } else {
+            document.getElementById("background-owned").classList.add("hidden");
+            document.getElementById("background-not-owned").classList.remove("hidden");
+            document.getElementById("background-insufficient").classList.add("hidden");
+        }
     }
 
+
     function closeBackgroundModal(){
+        document.body.style.overflow = "auto";
         document.getElementById("backgroundModal").classList.add("hidden");
     }
 </script>
+
+@endsection
+

@@ -1,5 +1,7 @@
 body {
-    background: linear-gradient(to right, #1b2330, #2b406b, #1c2432);
+    background: url("https://cdn.akamai.steamstatic.com/store/promo/summer2024/summer2024_tile_bg.png");
+    background-repeat: repeat;
+    /* background: linear-gradient(to right, #1b2330, #2b406b, #1c2432); */
     color: white;
     background-color: #1b2330;
 }
@@ -23,23 +25,23 @@ body {
 }
 
 .blue-gradient {
-    background: linear-gradient(to right, #92b0df, #eff6fb);
+    background: linear-gradient(to right, #373c42, #444a51);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    text-shadow: 0px 0px 2px #92b0df;
+    text-shadow: 0px 0px 1px #d2d2d2;
 }
 
 .item-card {
-    background-color: #1d3051;
+    background-color: #373c42;
     border-radius: 5px;
     transition: all ease 0.3s;
 }
 
 .image-bg {
     border-radius: 5px 5px 0 0;
-    background: linear-gradient(to bottom right, #1f3150, #2d3f6b);
+    background-color: #444a51;
 }
 
 .item-card:hover {
