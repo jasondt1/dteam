@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Store')
 @section('css', asset('css/store.css'))
 
 @section('content')

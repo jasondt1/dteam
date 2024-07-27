@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Point Shop')
 @section('css', asset('css/point-shop.css'))
 
 @section('content')
@@ -44,7 +45,7 @@
                 <div class="w-full h-44 flex items-center image-bg"><img loading="lazy" class="w-full" style="border-radius: 5px 5px 0 0" src={{$avatar->image_url}} alt="" onclick="showModal('{{$avatar->id}}', '{{$avatar->name}}' , '{{$avatar->image_url}}', 'background', '{{$avatar->price}}', {{Auth::user() && Auth::user()->item_libraries->contains($avatar->id)}})">
                 </div>
                 <div class="p-2">
-                    <p class="uppercase text-xs text-[#C6CAD6] tracking-wider">{{$avatar->name}}</p>
+                    <p class="uppercase text-xs text-[#C6CAD6] tracking-wider truncate">{{$avatar->name}}</p>
                     <div class="absolute bottom-2 right-2 tracking-wider text-[#DAE8F0] text-xs flex items-center gap-1">
                     <div class="w-4 h-4 flex">
                         <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt=""></div>
@@ -69,7 +70,7 @@
                 <div class="w-full h-44 flex items-center image-bg"><img class="w-full px-2" loading="lazy" src={{$background->image_url}} alt="">
                 </div>
                 <div class="p-2">
-                    <p class="uppercase text-xs text-[#C6CAD6] tracking-wider">{{$background->name}}</p>
+                    <p class="uppercase text-xs text-[#C6CAD6] tracking-wider truncate">{{$background->name}}</p>
                     <div class="absolute bottom-2 right-2 tracking-wider text-[#DAE8F0] text-xs flex items-center gap-1">
                     <div class="w-4 h-4 flex">
                         <img class="w-full h-full" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/point-logo.png?alt=media&token=336cd5ce-858b-4578-8455-236820455d68" alt=""></div>
@@ -188,7 +189,6 @@
 </div>
 <script>
     function showModal(id, title, image, type, price, owned) {
-        document.body.style.overflow = "hidden";
         document.getElementById("avatarModal").classList.remove("hidden");
         document.getElementById("avatar-image").src = image;
         document.getElementById("avatar-image2").src = image;
@@ -213,12 +213,10 @@
     }
 
     function closeModal() {
-        document.body.style.overflow = "auto";
         document.getElementById("avatarModal").classList.add("hidden");
     }
 
     function showBackgroundModal(id, title, image, type, price, owned) {
-        document.body.style.overflow = "hidden";
         document.getElementById("backgroundModal").classList.remove("hidden");
         document.getElementById("background-image").src = image;
         document.getElementById("background-title").textContent = title;
@@ -243,7 +241,6 @@
 
 
     function closeBackgroundModal(){
-        document.body.style.overflow = "auto";
         document.getElementById("backgroundModal").classList.add("hidden");
     }
 </script>

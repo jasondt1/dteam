@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: ' . $user->nickname)
 @section('css', asset('css/profile.css'))
 
 @section('content')
@@ -33,7 +34,7 @@
                         @if($user->bio)
                             {{ $user->bio }}
                         @else
-                            There is no information given
+                            There is no information given.
                         @endif
                     </p>
                 </div>
@@ -62,7 +63,7 @@
             <div class="left w-full md:w-3/4 md:ml-4">
                 <p class="recent">Recently Added</p>
                 @if($user->game_libraries->count() == 0)
-                <p class="w-full text-center mt-4">There is no recent purchase</p>
+                <p class="w-full text-center mt-4">There is no recent purchase.</p>
                 @endif
                 @foreach ($user->game_libraries->sortKeysDesc()->take(3) as $game)
                 <div id="{{ $game->id }}" class="game-card p-4 mt-5 relative">

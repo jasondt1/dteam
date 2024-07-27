@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Login')
 @section('css', asset('css/login.css'))
 
 @section('content')

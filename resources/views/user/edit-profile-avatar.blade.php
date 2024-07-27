@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Edit Profile')
 @section('css', asset('css/edit-profile.css'))
 
 @section('content')
@@ -36,7 +37,7 @@
                         <div class="flex flex-col mb-6 gap-1 w-32 h-32">
                             <img id="profile-pic-preview" class="min-w-full min-h-full" src="{{ Auth::user()->profile_picture_url }}" alt="">
                         </div>
-                        <input type="file" id="avatar-input" name="avatar" accept="image/*" class="hidden">
+                        <input type="file" id="avatar-input" name="avatar" accept=".jpg, .jpeg, .png" class="hidden">
                         <input type="hidden" id="image-url" name="image_url"/>
                         <button type="button" class="cancel-btn py-1.5 px-8" onclick="document.getElementById('avatar-input').click()">Upload your avatar</button>
                         <div class="mt-5">

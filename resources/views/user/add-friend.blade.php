@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Add Friend')
 @section('css', asset('css/friend.css'))
 
 @section('content')

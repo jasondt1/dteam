@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Manage Wallet Code')
 @section('css', asset('css/admin.css'))
 
 @section('content')

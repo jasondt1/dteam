@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Edit Profile')
 @section('css', asset('css/edit-profile.css'))
 
 @section('content')
@@ -43,8 +44,8 @@
                         <div class="mt-[55%]">
                             <p class="mb-2">Your Profile Backgrounds</p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                                <div class="w-full h-auto cursor-pointer" onclick="setBackground('https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac')">
-                                    <img class="w-full h-full imgs" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac" alt="">
+                                <div class="w-full h-auto cursor-pointer" onclick="setBackground('https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1')">
+                                    <img class="w-full h-full imgs" src="https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1" alt="">
                                 </div>
                                 @foreach (Auth::user()->item_libraries as $item)
                                     @if ($item->type == 'background')

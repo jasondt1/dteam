@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: History')
 @section('css', asset('css/gift.css'))
 
 @section('content')

@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Wishlist')
 @section('css', asset('css/wishlist.css'))
 
 @section('content')

@@ -197,7 +197,7 @@ class GameController extends Controller
 
         $recentSentiment = $this->calculateSentiment($ratingType1CountRecent, $ratingType2CountRecent, $recentReviews);
 
-        return view('publisher/games/game-details', [
+        return view('user/game-details', [
             'game' => $game,
             'totalReviews' => $totalReviews,
             'recentReviews' => $recentReviews,
@@ -226,7 +226,7 @@ class GameController extends Controller
     public function viewStore(){
         $popularGames = Game::withCount('game_libraries')->orderBy('game_libraries_count', 'desc')->take(5)->get();
         $discountedGames = Game::where('discount_percentage', '>', 0)->get();
-        $discountedGames = $discountedGames->take(9);
+        $discountedGames = $discountedGames->take(10);
 
         $genres = Genre::where('is_active', true)->get();
         return view('user/store', compact('popularGames', 'discountedGames', 'genres'));

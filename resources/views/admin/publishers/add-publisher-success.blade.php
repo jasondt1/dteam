@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Add Publisher Success')
 @section('css', asset('css/register.css'))
 
 @section('content')

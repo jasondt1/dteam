@@ -1,5 +1,6 @@
 @extends('layout')
 
+@section('title', 'DTeam :: Register')
 @section('css', asset('css/register.css'))
 
 @section('content')

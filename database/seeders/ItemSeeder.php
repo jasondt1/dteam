@@ -16,24 +16,6 @@ class ItemSeeder extends Seeder
     public function run()
     {
         Item::create([
-            'name' => 'Meow Mail',
-            'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fmeow_mail.gif?alt=media&token=3f79d8e7-2267-469c-8e6d-5c45e547f9f7',
-            'price' => 2000
-        ]);
-        Item::create([
-            'name' => 'Ashen Hush',
-            'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1',
-            'price' => 2000
-        ]);
-        Item::create([
-            'name' => 'Gestu Clan Estate',
-            'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fgestu_clan_estate.gif?alt=media&token=1ae819e7-d64e-4700-a3ef-d2a0c3be33a1',
-            'price' => 2000
-        ]);
-        Item::create([
             'name' => 'Cat Courier',
             'type' => 'avatar',
             'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2855140/18201b6931880d3bcb863fc3f5f5d0f3889f5c68.gif',
@@ -100,7 +82,55 @@ class ItemSeeder extends Seeder
             'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1684100/6ca57220d4dbb1fc7a6e620221f78328ed409db0.gif',
             'price' => 1000
         ]);
+        Item::create([
+            'name' => 'Neon Face',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/788100/8454554bc0a8bb82ac3991002fb71801b17596ff.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Hellebore',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1574580/02a88fe40be3642793b1b574f378ef24e0372b8e.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'The Red Crown',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1313140/b5a0bd8b9bea4e1bd4773c9c3c0c8c1465b7340d.gif',
+            'price' => 1000
+        ]);
+        Item::create([
+            'name' => 'Doggie',
+            'type' => 'avatar',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1476970/0f353f8171916feebeb7f2bc44acba6310b73ef0.gif',
+            'price' => 1000
+        ]);
 
+        Item::create([
+            'name' => 'Cat',
+            'type' => 'background',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1332010/e7a8496874fe44a3c773c46ab1e8b886f71035e8.jpg',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'SHHHHH!',
+            'type' => 'background',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/945360/380202f367adc87ef2900f1d96d7dfa4cbc413ab.jpg',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'Hero',
+            'type' => 'background',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2161700/05ed1962c04f5fbbca0788664b81725a92e9273c.jpg',
+            'price' => 2000
+        ]);
+        Item::create([
+            'name' => 'Mute',
+            'type' => 'background',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/359550/8115fa76fc2e5759f041e9490aabfb636d1e6fad.jpg',
+            'price' => 2000
+        ]);
         Item::create([
             'name' => 'The World',
             'type' => 'background',
@@ -113,28 +143,46 @@ class ItemSeeder extends Seeder
             'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Foko_background.gif?alt=media&token=13dcf4d2-4d83-4f78-9805-aee9dae59e1c',
             'price' => 2000
         ]);
+        // Item::create([
+        //     'name' => 'Mushroom',
+        //     'type' => 'background',
+        //     'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fmushroom.gif?alt=media&token=85ffdea6-704e-4baa-8628-c4d2ebc81332',
+        //     'price' => 2000
+        // ]);
+        // Item::create([
+        //     'name' => 'Bedroom Scene',
+        //     'type' => 'background',
+        //     'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fbedroom_scene.gif?alt=media&token=3c4bbb63-f321-447f-9c76-a4a2269f0f67',
+        //     'price' => 2000
+        // ]);
         Item::create([
-            'name' => 'Spooky Mascots',
+            'name' => 'Glitch Sansui-Zu',
             'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fspooky_mascots.gif?alt=media&token=b04160fc-0e94-4148-aa50-e0f241085417',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1465680/ee46cc3b6988057d435be7e391472d46f278d87a.jpg',
             'price' => 2000
         ]);
         Item::create([
-            'name' => 'Animated Green Background',
+            'name' => 'Hartman',
             'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fanimated_green_background.gif?alt=media&token=54ced592-8956-4728-a2c9-338a17f72250',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fhartman.gif?alt=media&token=165e01f7-3fc8-440a-918d-7e23fce4e38f',
+            'price' => 2000
+        ]);
+        // Item::create([
+        //     'name' => 'Epiphyllums',
+        //     'type' => 'background',
+        //     'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fepiphyllums.gif?alt=media&token=f2b64dce-fe72-4375-8b92-11314e5e7a00',
+        //     'price' => 2000
+        // ]);
+        Item::create([
+            'name' => "Original Box Art",
+            'type' => 'background',
+            'image_url' => 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/275850/f9fd22144df3cffec574b31f14d44151551980c8.png',
             'price' => 2000
         ]);
         Item::create([
-            'name' => 'The Crossroads',
+            'name' => "Rainy Day Greenhouse",
             'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fthe_crossroads.gif?alt=media&token=1be77948-d1d2-49b8-b0c6-d0605428134b',
-            'price' => 2000
-        ]);
-        Item::create([
-            'name' => 'Bubble Blue',
-            'type' => 'background',
-            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fbubble_blue.gif?alt=media&token=e1637127-b8f4-4a8b-8da3-a2aaab7bbf18',
+            'image_url' => 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Frainy_day_greenhouse.gif?alt=media&token=01f892e9-b6e0-440a-98cd-76d1c227d686',
             'price' => 2000
         ]);
     }
