@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: History')
+@section('title', 'History - DTeam')
 @section('css', asset('css/gift.css'))
 
 @section('content')
@@ -121,6 +121,9 @@
                 </div>
             </div>
         </div>
+        @if($histories->count() == 0)
+        <div class="text-center text-[#A9AFB4] mt-5 text-sm">No results.</div>
+        @endif
         @if ($histories->hasPages())
         <div class="mt-4 flex justify-center">
           {{ $histories->links() }}

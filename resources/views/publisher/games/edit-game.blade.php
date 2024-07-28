@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Edit Game')
+@section('title', 'Edit Game - DTeam')
 @section('css', asset('css/register.css'))
 
 @section('content')
@@ -32,7 +32,7 @@
         </div>
         <div class="flex flex-col">
             <label for="game_full_description" class="text-gray-300 text-sm">Full Description</label>
-            <div class="w-full @error('game_full_description') border border-[#C15755] @enderror"><textarea name="game_full_description" id="game_full_description" class="full w-full h-64 rounded-sm field-bg p-3 text-white">{{ old('game_full_description', $game->full_description) }}</textarea></div>
+            <div id="txt" class="w-full @error('game_full_description') border border-[#C15755] @enderror"><textarea name="game_full_description" id="game_full_description" class="full w-full h-64 rounded-sm field-bg p-3 text-white">{{ old('game_full_description', $game->full_description) }}</textarea></div>
         </div>
         <div class="flex flex-col">
             <label for="release_date" class="text-gray-300 text-sm">Release Date</label>
@@ -146,4 +146,53 @@
     </form>
     <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
     <script type="module" src="{{ asset('js/add-game.js') }}"></script>
+    <script>
+        const inputs = document.querySelectorAll('input');
+         const textareas = document.querySelectorAll('textarea');
+         const radioButtons = document.querySelectorAll('input[type="radio"]');
+         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+         const imageButton = document.getElementById('imageButton');
+         const imagePreview = document.getElementById('imagePreview');
+
+         inputs.forEach(input => {
+             input.addEventListener('click', () => {
+                 input.classList.remove('border');
+                 input.classList.remove('border-[#C15755]');
+             });
+         });
+
+         textareas.forEach(textarea => {
+             textarea.addEventListener('click', () => {
+                 textarea.classList.remove('border');
+                 textarea.classList.remove('border-[#C15755]');
+             });
+         });
+
+         radioButtons.forEach(radio => {
+             radio.addEventListener('click', () => {
+                 radio.parentElement.parentElement.classList.remove('border');
+                 radio.parentElement.parentElement.classList.remove('border-[#C15755]');
+             });
+         });
+
+         checkboxes.forEach(checkbox => {
+             checkbox.addEventListener('click', () => {
+                 checkbox.parentElement.parentElement.classList.remove('border');
+                 checkbox.parentElement.parentElement.classList.remove('border-[#C15755]');
+             });
+         });
+
+         imageButton.addEventListener('click', () => {
+             imageButton.parentElement.classList.remove('border');
+             imageButton.parentElement.classList.remove('border-[#C15755]');
+         });
+
+         imagePreview.addEventListener('click', (e) => {
+             if (e.target.classList.contains('remove-image')) {
+                 e.target.parentElement.classList.remove('border');
+                 e.target.parentElement.classList.remove('border-[#C15755]');
+             }
+         });
+
+         </script>
 @endsection

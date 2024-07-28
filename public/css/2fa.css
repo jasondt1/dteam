@@ -1,0 +1,82 @@
+body {
+    position: relative;
+    margin: 0;
+    background-color: #181d24;
+    background-image: url("https://community.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg");
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.bg-gray-900 {
+    background-color: #1b2838;
+}
+
+.bg-gray-800 {
+    background-color: #2a475e;
+}
+
+.text-gray-400 {
+    color: #c7d5e0;
+}
+
+.bg-gray-700 {
+    background-color: #33353b;
+}
+
+.bg-blue-600 {
+    background-color: #66c0f4;
+}
+
+.bg-blue-600:hover {
+    background-color: #417a9b;
+    transition: background-color 0.3s ease;
+}
+
+.focus\:ring-blue-500 {
+    --tw-ring-color: #417a9b;
+}
+
+.verification-code-container {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.verification-code-input {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #4d4e52;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.verification-code-input:focus {
+    border-bottom: 2px solid #007bff;
+}
+
+@media screen and (max-width: 480px) {
+    .verification-code-container {
+        width: 100%;
+    }
+
+    .verification-code-input {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .verification-code-input:focus {
+        border-bottom: 2px solid #007bff;
+    }
+}

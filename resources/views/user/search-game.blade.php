@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Search Game')
+@section('title', 'Search Game - DTeam' )
 @section('css', asset('css/search-game.css'))
 
 @section('content')

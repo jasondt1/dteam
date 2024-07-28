@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Add Wallet Code Success')
+@section('title', 'Add Wallet Code Success - DTeam')
 @section('css', asset('css/register.css'))
 
 @section('content')

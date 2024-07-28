@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Change Password')
+@section('title', 'Change Password - DTeam')
 @section('css', asset('css/register.css'))
 
 @section('content')
@@ -46,4 +46,13 @@
             <div class="loader m-auto hidden"></div>
         </button>
     </form>
+    <script>
+        const inputs = document.querySelectorAll('input')
+        inputs.forEach(input => {
+            input.addEventListener('click', () => {
+                input.classList.remove('border')
+                input.classList.remove('border-[#C15755]')
+            })
+        })
+</script>
 @endsection

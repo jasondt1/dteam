@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Checkout')
+@section('title', 'Checkout - DTeam')
 @section('css', asset('css/cart.css'))
 
 @section('content')

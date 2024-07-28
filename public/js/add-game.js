@@ -51,8 +51,16 @@ const uploadBlob = (blob) =>
         );
     });
 
+const txt = document.getElementById("txt");
+
 tinymce.init({
     selector: "textarea.full",
+    setup: function (editor) {
+        editor.on("click", function () {
+            txt.classList.remove("border");
+            txt.classList.remove("border-[#C15755]");
+        });
+    },
     height: 500,
     plugins: ["image", "lists"],
     toolbar:

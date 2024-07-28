@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Edit Genre')
+@section('title', 'Edit Genre - DTeam')
 @section('css', asset('css/register.css'))
 
 @section('content')
@@ -29,4 +29,13 @@
         </div>
         <button type="submit" class="blue-btn w-full md:max-w-40 py-2">Edit</button>
     </form>
+    <script>
+            const inputs = document.querySelectorAll('input')
+            inputs.forEach(input => {
+                input.addEventListener('click', () => {
+                    input.classList.remove('border')
+                    input.classList.remove('border-[#C15755]')
+                })
+            })
+    </script>
 @endsection

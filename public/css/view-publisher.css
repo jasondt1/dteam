@@ -1,0 +1,157 @@
+body {
+    background-image: url("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/page_bg_generated_v6b.jpg?t=1717088796");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #1e2837;
+    color: white;
+    position: relative;
+}
+
+.inner-search-form input {
+    background-color: #223a4c;
+    border: 1px solid black;
+    filter: drop-shadow(1px 1px 1px #223a4c);
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    height: 1.8rem;
+    margin-right: 0.2rem;
+}
+
+.inner-search-form button {
+    background-color: #223a4c;
+    color: #65c0f5;
+    width: 5rem;
+    height: 1.7rem;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.inner-search-form button:hover {
+    background: linear-gradient(to right, #65bcef, #437d9f);
+    color: white;
+}
+
+.inner-search-form select {
+    background-color: #223a4c;
+    color: #65c0f5;
+    width: 9rem;
+    height: 1.7rem;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.inner-search-form select:hover {
+    background: linear-gradient(to right, #65bcef, #437d9f);
+    color: white;
+}
+
+.inner-search-form option {
+    background-color: #223a4c;
+    color: #65c0f5;
+    width: 9rem;
+    height: 1.7rem;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.inner-search-form option:hover {
+    background: linear-gradient(to right, #65bcef, #437d9f);
+    color: white;
+}
+
+.game-card {
+    background-color: #16202d;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    background-color: #101822;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: #7ec9f4;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    transform: translateY(-4px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    filter: drop-shadow(0px 0px 4px #000000);
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    font-size: 13px;
+}
+
+.checkbox-container:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+    background: linear-gradient(to right, #64bbed, #437ea0);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 0.5rem;
+}
+
+.checkbox {
+    display: block;
+    width: 1.1em;
+    height: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 0.2em;
+    margin-right: 0.5rem;
+}
+
+input[type="checkbox"]:checked + .checkbox {
+    background-color: white;
+}
+
+.checkbox:after {
+    content: "";
+    display: none;
+}
+
+input[type="checkbox"]:checked + .checkbox:after {
+    display: block;
+    width: 4.3px;
+    height: 11px;
+    border: solid #63b9eb;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-left: 4px;
+    margin-top: -0.2px;
+}

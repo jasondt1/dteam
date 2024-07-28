@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Mailer extends Mailable
+class ForgotPassword extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,8 +32,8 @@ class Mailer extends Mailable
      */
     public function build()
     {
-        return $this->subject('Publisher Account Creation')
-                    ->view('emails.template', ['details' => $this->details]);
+        return $this->subject('Forgot Password')
+                    ->view('emails.forgot-password', ['details' => $this->details]);
     }
 
     /**
@@ -44,7 +44,7 @@ class Mailer extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.template',
+            view: 'emails.forgot-password',
             with: ['details' => $this->details]
         );
     }

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Welcome')
+@section('title', 'Welcome - DTeam')
 @section('css', asset('css/edit-profile.css'))
 
 @section('content')
@@ -27,7 +27,7 @@
                         </div>
                         @endif
                     </div>
-                    <form action="{{ route('update-general') }}" method="POST">
+                    <form action="{{ route('update-setup') }}" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="flex flex-col mb-6 gap-1">

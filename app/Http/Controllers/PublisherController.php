@@ -39,7 +39,7 @@ class PublisherController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-        $password = str_pad(random_int(0, 999999999999), 12, '0', STR_PAD_LEFT);
+        $password = str_pad(random_int(0, 99999999), 8, '0', STR_PAD_LEFT);
         $newUser = new User();
         $newUser->email = $request->publisher_email;
         $newUser->password = bcrypt($password);
@@ -47,7 +47,7 @@ class PublisherController extends Controller
         $newUser->save();
 
         $details = [
-            'title' => 'DTeam Publisher Account Creation',
+            'title' => 'Publisher Account Creation',
             'email' => $request->publisher_email,
             'password' => $password,
         ];

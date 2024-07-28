@@ -225,9 +225,11 @@ class GameController extends Controller
     }
 
     public function viewStore(){
-        $popularGames = Game::withCount('game_libraries')->orderBy('game_libraries_count', 'desc')->take(5)->get();
-        $discountedGames = Game::where('discount_percentage', '>', 0)->get();
-        $discountedGames = $discountedGames->take(10);
+        $popularGames = Game::withCount('game_libraries')->orderBy('game_libraries_count', 'desc')->take(20)->get();
+        $discountedGames = Game::where('discount_percentage', '>', 0)->take(20)->get();
+
+        $popularGames = $popularGames->shuffle()->take(10);
+        $discountedGames = $discountedGames->shuffle()->take(10);
 
         $genres = Genre::where('is_active', true)->get();
         return view('user/store', compact('popularGames', 'discountedGames', 'genres'));
@@ -247,6 +249,8 @@ class GameController extends Controller
         $library->discount_percentage = $gift->discount_percentage;
 
         if ($library->user->game_libraries->contains('game_id', $library->game_id)) {
+            $gift->status = 1;
+            $gift->save();
             return redirect()->back();
         }
 

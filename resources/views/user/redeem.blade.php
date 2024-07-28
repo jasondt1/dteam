@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Redeem')
+@section('title', 'Redeem Wallet - DTeam')
 @section('css', asset('css/redeem.css'))
 
 @section('content')

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Manage Genre')
+@section('title', 'Manage Genre - DTeam')
 @section('css', asset('css/admin.css'))
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layout')
 
-@section('title', 'DTeam :: ' . $publisher->name)
-@section('css', asset('css/search-game.css'))
+@section('title', $publisher->name .' - DTeam')
+@section('css', asset('css/view-publisher.css'))
 
 @section('content')
     <div class="container min-w-full">

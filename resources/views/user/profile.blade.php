@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: ' . $user->nickname)
+@section('title', $user->nickname .' - DTeam')
 @section('css', asset('css/profile.css'))
 
 @section('content')

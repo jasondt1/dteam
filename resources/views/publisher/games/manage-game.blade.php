@@ -1,7 +1,7 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Manage Game')
-@section('css', asset('css/search-game.css'))
+@section('title', 'Manage Game - DTeam')
+@section('css', asset('css/view-publisher.css'))
 
 @section('content')
     <div class="container min-w-full -mt-1">

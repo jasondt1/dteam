@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Point Shop')
+@section('title', 'Point Shop - DTeam')
 @section('css', asset('css/point-shop.css'))
 
 @section('content')

@@ -6,12 +6,8 @@
             </div>
         </a>
         <div class="menu-container">
-            @if(Auth::user()->publisher)
             <a class="nav-link" href="/publisher/manage-game">MANAGE GAMES</a>
             <a class="nav-link" href="/publisher/edit-profile">EDIT PROFILE</a>
-            @else
-            <a class="nav-link" href="/publisher/welcome">SETUP PROFILE</a>
-            @endif
             <a class="nav-link" href="/publisher/change-password">CHANGE PASSWORD</a>
             <a class="nav-link" href="/logout">LOGOUT</a>
         </div>

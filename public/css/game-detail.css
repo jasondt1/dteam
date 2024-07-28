@@ -2,6 +2,7 @@ body {
     background-image: url("https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/page_bg_generated_v6b.jpg?t=1717088796");
     background-repeat: no-repeat;
     background-color: #1b2838;
+    background-position: center top;
     color: white;
 }
 

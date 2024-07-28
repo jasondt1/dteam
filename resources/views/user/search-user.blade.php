@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Search User')
+@section('title', 'Search User - DTeam')
 @section('css', asset('css/friend.css'))
 
 @section('content')

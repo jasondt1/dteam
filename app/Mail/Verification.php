@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Mailer extends Mailable
+class Verification extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,8 +32,8 @@ class Mailer extends Mailable
      */
     public function build()
     {
-        return $this->subject('Publisher Account Creation')
-                    ->view('emails.template', ['details' => $this->details]);
+        return $this->subject('New Sign In Request')
+                    ->view('emails.2fa', ['details' => $this->details]);
     }
 
     /**
@@ -44,7 +44,7 @@ class Mailer extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.template',
+            view: 'emails.2fa',
             with: ['details' => $this->details]
         );
     }

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Add Wallet Code')
+@section('title', 'Add Wallet Code - DTeam')
 @section('css', asset('css/register.css'))
 
 @section('content')
@@ -41,5 +41,18 @@
         </div>
         <button type="submit" class="blue-btn w-full md:max-w-40 py-2">Add</button>
     </form>
-
+    <script>
+            const inputs = document.querySelectorAll('input')
+            inputs.forEach(input => {
+                input.addEventListener('click', () => {
+                    input.classList.remove('border')
+                    input.classList.remove('border-[#C15755]')
+                })
+            })
+            const select = document.querySelector('select')
+                    select.addEventListener('click', () => {
+                        select.classList.remove('border')
+                        select.classList.remove('border-[#C15755]')
+                    })
+    </script>
 @endsection

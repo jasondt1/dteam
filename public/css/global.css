@@ -19,31 +19,58 @@ body {
     cursor: default;
 }
 
+@property --color1 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #6abdfa;
+}
+
+@property --color2 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #355ec9;
+}
+
 .blue-btn {
-    background: linear-gradient(to right, #5aa0eb, #355ec9);
-    color: #c9e0f5;
+    background: linear-gradient(to right, var(--color1), var(--color2));
+    color: white;
     text-shadow: 0.5px 0.5px black;
     text-decoration: none;
     border-radius: 4px;
-    cursor: pointer;
+    transition: --color1 0.5s, --color2 0.5s;
 }
 
 .blue-btn:hover {
-    background: linear-gradient(to right, #6abdfa, #4b85dd);
+    --color1: #6abdfa;
+    --color2: #4b85dd;
     color: white;
 }
 
+@property --color3 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #82ae3e;
+}
+
+@property --color4 {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #648931;
+}
+
 .green-btn {
-    background: linear-gradient(to right, #82ae3e, #648931);
+    background: linear-gradient(to right, var(--color3), var(--color4));
     color: #d8eeb0;
     text-shadow: 0.5px 0.5px black;
     text-decoration: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: --color3 0.5s, --color4 0.5s;
 }
 
 .green-btn:hover {
-    background: linear-gradient(to right, #9ed44d, #77a43b);
+    --color3: #9ed44d;
+    --color4: #77a43b;
     color: white;
 }
 
@@ -56,6 +83,10 @@ body {
 
 .white-btn:hover {
     background-color: #f1f1f1;
+}
+
+.field-bg {
+    background-color: #33353b;
 }
 
 .bg-1 {

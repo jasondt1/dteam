@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Gifts')
+@section('title', 'Gifts - DTeam')
 @section('css', asset('css/gift.css'))
 
 @section('content')

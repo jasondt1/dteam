@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Manage Publisher')
+@section('title', 'Manage Publisher - DTeam')
 @section('css', asset('css/admin.css'))
 
 @section('content')
@@ -56,12 +56,13 @@
                                     {{ $index }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <div class="h-12 w-12">
+                                    <a href={{ route('show-publisher', ['name'=>$publisher->name]) }} class="block max-h-12 max-w-12">
                                         <img class="w-full h-full" src={{ $publisher->image_url }} alt="">
-                                    </div>
+                                    </a>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    {{ $publisher->name }}
+                                    <a class="hover:underline" href={{ route('show-publisher', ['name'=>$publisher->name]) }}>{{ $publisher->name }}</a>
+
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                     <a href={{ $publisher->website }} class="underline">{{ $publisher->website }}</a>

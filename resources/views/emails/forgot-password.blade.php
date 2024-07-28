@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Publisher Account Creation</title>
+    <title>New Sign In Request</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,10 +31,15 @@
         .content h1 {
             color: #c7d5e0;
         }
-        .important {
+        .code {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 48px;
+            letter-spacing: 2px;
             font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
             color: #c7d5e0;
-            text-decoration: none; 
         }
         .footer {
             text-align: center;
@@ -46,7 +51,7 @@
             color: #c7d5e0;
             text-decoration: none;
         }
-        p {
+        p{
             color: #c7d5e0;
         }
     </style>
@@ -58,10 +63,8 @@
         </div>
         <div class="content">
             <h1>{{ $details['title'] }}</h1>
-            <p>Your DTeam Publisher account has been created. Here are your login credentials:</p>
-            <p>Email: <span class="important">{{ $details['email'] }}</span></p>
-            <p>Password: {{ $details['password'] }}</p>
-            <p>Please login and setup your account.</p>
+            <p>Use this password to sign in to your account:</p>
+            <div class="code">{{ $details['password'] }}</div>
         </div>
         <div class="footer">
             <p>If you didn't request this, please ignore this email.</p>

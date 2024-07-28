@@ -37,10 +37,25 @@ Route::get('/login', function () {
     return view('login');
 })->name('login')->middleware('guest');
 
+Route::get('/forgot-password', function () {
+    return view('forgot-password');
+})->name('forgot-password')->middleware('guest');
+
+Route::get('/reset-password', function () {
+    return view('reset-password');
+})->name('reset-password')->middleware('guest');
+
+Route::get('/reset-otp', function () {
+    return view('reset-otp');
+})->name('reset-otp')->middleware('guest');
+
+Route::post('check-forgot-password', [UserController::class, 'forgotPassword'])->name('check-forgot-password')->middleware('guest');
+
 Route::get('/logout', function () {
     Auth::logout();
+    session()->flush();
     return redirect('/store/show');
-})->middleware('auth');
+})->name('logout')->middleware('auth');
 
 Route::prefix('admin')->middleware('admin')->group(function () {
     Route::prefix('publisher')->group(function () {
@@ -86,6 +101,9 @@ Route::prefix('user')->group(function () {
     Route::post('login', [UserController::class, 'login'])->name('data-login');
     Route::put('change-password', [UserController::class, 'changePassword'])->name('data-change-password')->middleware('auth');;
     Route::get('purchase-history', [UserController::class, 'showHistory'])->name('purchase-history')->middleware('user');
+    Route::get('verification', [UserController::class, 'showVerification'])->name('verification')->middleware('unverified');
+    Route::post('verify', [UserController::class, 'verify'])->name('verify')->middleware('user')->middleware('unverified');
+    Route::get('resend', [UserController::class, 'resend'])->name('resend')->middleware('user')->middleware('unverified');
 });
 
 Route::prefix('publisher')->middleware('publisher')->group(function () {
@@ -182,6 +200,7 @@ Route::get('setup-profile/', [UserController::class, 'setupProfile'])->name('set
 
 Route::prefix('edit-profile')->middleware('user')->group(function () {
     Route::get('general', [UserController::class, 'editGeneral'])->name('edit-profile-general');
+    Route::put('update-setup', [UserController::class, 'updateSetup'])->name('update-setup');
     Route::put('update-general', [UserController::class, 'updateGeneral'])->name('update-general');
     Route::put('update-avatar', [UserController::class, 'updateAvatar'])->name('update-avatar');
     Route::put('update-background', [UserController::class, 'updateBackground'])->name('update-background');

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Login')
+@section('title', 'Sign In - DTeam')
 @section('css', asset('css/login.css'))
 
 @section('content')
@@ -27,17 +27,26 @@
                             Remember Me
                         </label>
                     </div>
-                        <button type="submit" class="blue-btn w-full py-2">Sign In</button>
+                        <button type="submit" class="blue-btn w-3/4 py-3 m-auto">Sign In</button>
                         @error('invalid')
-                            <div class="text-[#C15755] h-5 text-[14px]">
+                            <div class="text-[#C15755] font-semibold m-auto text-center h-5 text-xs -mb-2">
                                 <p>Please check your email and password and try again.</p>
                             </div>
                         @enderror
+                        <a class="text-[#AFAFAF] hover:text-[#C9C9C9] underline text-xs text-center" href={{ route('forgot-password') }}>Forgot Password?</a>
                     </form>
                     </div>
                     <div class="flex items-center img-container"><img src={{asset('images/logo.png')}} alt="" width="450"></div>
                 </div>
         </div>
-
     </div>
+    <script>
+            const inputs = document.querySelectorAll('input')
+            inputs.forEach(input => {
+                input.addEventListener('click', () => {
+                    input.classList.remove('border')
+                    input.classList.remove('border-[#C15755]')
+                })
+            })
+    </script>
 @endsection

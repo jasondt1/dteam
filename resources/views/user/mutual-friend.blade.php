@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Mutual Friends')
+@section('title', 'Mutual Friends - DTeam')
 
 @section('content')
     <div class="container min-w-full">

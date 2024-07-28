@@ -29,12 +29,12 @@
         <a href="/store/show">Your Store</a>
         <div class="">
             <a id="category" class="cursor-pointer">Categories</a>
-            <div class="w-full h-max absolute top-9 left-0 p-5 category-container" id="category-container" style="z-index: 999999999">
+            <div class="w-full h-max absolute top-20 md:top-9 left-0 p-5 category-container" id="category-container" style="z-index: 999999999">
                 @php
                     $genres = \App\Models\Genre::all();
                 @endphp
-                <div class="flex gap-8">
-                    <div class="flex flex-col gap-3 border-r border-[#d8d8d845] pr-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="flex flex-col gap-3 md:border-r border-[#d8d8d845] pr-8">
                         <p class="text-[#2EBFFF] font-bold uppercase text-xs" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)">Special Section</p>
                         <div class="flex flex-col gap-3 text-[13px] text-[#D8D8D8]">
                             <p onclick="navigate('{{ route('search-game', ['special_offers' => 'on']) }}')" class="category-link">Special Offers</p>
@@ -44,17 +44,17 @@
                             <p onclick="navigate('{{ route('search-game', ['sort_by' => 'release_date']) }}')"  class="category-link">New Releases</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-3 border-r border-[#d8d8d845] pr-8">
+                    <div class="flex flex-col gap-3 md:border-r border-[#d8d8d845] pr-8">
                         <p class="text-[#2EBFFF] font-bold uppercase text-xs" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)">Genres</p>
-                        <div class="flex flex-col flex-wrap max-h-40 gap-x-10 gap-y-3 text-[13px] text-[#D8D8D8]">
+                        <div class="grid grid-cols-3 gap-x-10 gap-y-3 text-[13px] text-[#D8D8D8]">
                             @foreach($genres as $genre)
                             <p onclick="navigate('{{ route('search-game', ['genres' => [$genre->id]]) }}')" class="category-link">{{ $genre->name }}</p>
-                        @endforeach
+                            @endforeach
                         </div>
                     </div>
                     <div class="flex flex-col gap-3">
                         <p class="text-[#2EBFFF] font-bold uppercase text-xs" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)">Price</p>
-                        <div class="flex flex-col flex-wrap max-h-40 gap-x-8 gap-y-3 text-[13px] text-[#D8D8D8]">
+                        <div class="grid grid-cols-2 gap-x-10 gap-y-3 max-h-40 text-[13px] text-[#D8D8D8]">
                             <p onclick="navigate('{{ route('search-game', ['max_price' => 60000]) }}')" class="category-link">Under Rp 60.000</p>
                             <p onclick="navigate('{{ route('search-game', ['max_price' => 120000]) }}')" class="category-link">Under Rp 120.000</p>
                             <p onclick="navigate('{{ route('search-game', ['max_price' => 180000]) }}')" class="category-link">Under Rp 180.000</p>

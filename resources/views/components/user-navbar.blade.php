@@ -26,7 +26,7 @@
             <div class="absolute -top-3.5 right-8 flex gap-1.5 items-center">
                 <div class="min-w-max -mt-2">
                     <a class="text-xs font-light" href="https://store.steampowered.com/about/">
-                        <p class="small-text font-light top-nav-btn flex gap-0.5 items-center">
+                        <p class="hidden lg:flex small-text font-light top-nav-btn gap-0.5 items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#FFFFFF">
                                 <path d="M480-336 288-528l51-51 105 105v-342h72v342l105-105 51 51-192 192ZM263.72-192Q234-192 213-213.15T192-264v-72h72v72h432v-72h72v72q0 29.7-21.16 50.85Q725.68-192 695.96-192H263.72Z"/>
                             </svg> Install Steam

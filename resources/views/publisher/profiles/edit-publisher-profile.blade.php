@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'DTeam :: Edit Profile')
+@section('title', 'Edit Profile - DTeam')
 @section('css', asset('css/register.css'))
 
 @section('content')
@@ -52,4 +52,13 @@
         <div></div>
     </form>
     <script type="module" src="{{ asset('js/publisher-welcome.js') }}"></script>
+    <script>
+        const inputs = document.querySelectorAll('input')
+        inputs.forEach(input => {
+            input.addEventListener('click', () => {
+                input.classList.remove('border')
+                input.classList.remove('border-[#C15755]')
+            })
+        })
+</script>
 @endsection
