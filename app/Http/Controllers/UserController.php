@@ -86,18 +86,23 @@ class UserController extends Controller
                 return redirect()->route('publisher-welcome');
             }
             else{
-                $code = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 5);
-                $hashedCode = bcrypt($code);
-                session(['code' => $hashedCode]);
-                session(['send_time' => time()]);
-                session(['status' => 'unverified']);
+                if(Auth::user()->nickname == null){
+                    session(['status' => 'verified']);
+                }
+                else{
+                    $code = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 5);
+                    $hashedCode = bcrypt($code);
+                    session(['code' => $hashedCode]);
+                    session(['send_time' => time()]);
+                    session(['status' => 'unverified']);
 
-                $details = [
-                    'title' => 'New Sign In Request',
-                    'email' => Auth::user()->email,
-                    'code' => $code,
-                ];
-                Mail::to(Auth::user()->email)->send(new Verification($details));
+                    $details = [
+                        'title' => 'New Sign In Request',
+                        'email' => Auth::user()->email,
+                        'code' => $code,
+                    ];
+                    Mail::to(Auth::user()->email)->send(new Verification($details));
+                }
                 return redirect()->back();
             }
         }
