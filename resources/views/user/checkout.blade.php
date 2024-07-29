@@ -147,7 +147,7 @@
                             <h2 class="font-medium text-sm">Total Price</h2>
                             <p id="total-price" class="font-bold price">{{ $totalPrice }}</p>
                         </div>
-                        <p id="confirm-btn" class="mt-2 blue-btn px-4 py-1.5 rounded-sm w-full text-sm text-center">Confirm</p>
+                        <p id="confirm-btn" class="mt-2 blue-btn px-4 py-1.5 rounded-sm w-full text-sm text-center cursor-pointer">Confirm</p>
                     </div>
                 </div>
                 @endif

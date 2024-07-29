@@ -22,7 +22,7 @@
         </div>
         <div class="w-[20rem] text-sm text-center text-[#B8B6B4]">It's free and easy. Discover thousands of games to play with millions of new friends.
             <br>
-            <a href="" class="underline">Learn more about Steam</a>
+            <a href="https://store.steampowered.com/about" class="underline">Learn more about DTeam</a>
         </div>
     </div>
   </footer>
