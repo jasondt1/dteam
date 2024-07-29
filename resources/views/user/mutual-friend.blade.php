@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('title', 'Mutual Friends - DTeam')
+@section('css', asset('css/friend.css'))
 
 @section('content')
     <div class="container min-w-full">
