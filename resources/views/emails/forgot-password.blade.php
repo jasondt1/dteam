@@ -59,7 +59,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://media.discordapp.net/attachments/1266980441123196930/1267081494199795834/download_3.png?ex=66a77d19&is=66a62b99&hm=99698b7eefe58c947d248ff75c07602a47c2998ba8b0f51b5aa97bfecd23d4b5&=&format=webp&quality=lossless&width=2160&height=654" alt="Steam Logo" width="250" height="75">
+            <img src="https://media.discordapp.net/attachments/1266980441123196930/1267081494199795834/download_3.png?ex=66a77d19&is=66a62b99&hm=99698b7eefe58c947d248ff75c07602a47c2998ba8b0f51b5aa97bfecd23d4b5&=&format=webp&quality=lossless&width=2160&height=654" alt="Logo" width="250" height="75">
         </div>
         <div class="content">
             <h1>{{ $details['title'] }}</h1>
