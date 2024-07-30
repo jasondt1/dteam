@@ -34,6 +34,7 @@
         @include('components.navbar')
     @endauth
     <div class="main {{ Route::currentRouteName() == 'profile' ? '' : 'p-8' }}">
+        {{-- <div class="z-[-999] absolute w-[1140px] left-[500px] border border-red-500 h-[100vh] top-0"></div> --}}
         @yield('content')
     </div>
     {{-- @include('components.footer') --}}
