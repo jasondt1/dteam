@@ -252,6 +252,8 @@ class GameController extends Controller
         $user->load('game_libraries');
 
         if ($user->game_libraries->contains('id', $gift->game_id)) {
+            $gift->status = 1;
+            $gift->save();
             return redirect()->back()->with('error', 'You already own this game.');
         }
 

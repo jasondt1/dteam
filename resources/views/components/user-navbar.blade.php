@@ -96,13 +96,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function toggleDropdown(menu) {
         menu.classList.toggle('show');
-        document.getElementById('inner-navbar').style.zIndex = -1;
+        const innerNavbar = document.getElementById('inner-navbar');
+        if(innerNavbar){
+            innerNavbar.style.zIndex = -1;
+        }
     }
 
     function closeDropdown(menu) {
         if (menu.classList.contains('show')) {
             menu.classList.remove('show');
-            document.getElementById('inner-navbar').style.zIndex = 1;
+            const innerNavbar = document.getElementById('inner-navbar');
+            if(innerNavbar){
+                innerNavbar.style.zIndex = 1;
+            }
         }
     }
 
@@ -110,7 +116,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.stopPropagation();
         toggleDropdown(dropdownMenu);
         closeDropdown(pendingDropdownMenu);
-        document.getElementById('inner-navbar').style.zIndex = -1;
+        const innerNavbar = document.getElementById('inner-navbar');
+        if(innerNavbar){
+            innerNavbar.style.zIndex = -1;
+        }
     });
 
     pendingDropdownToggle.addEventListener('click', (e) => {

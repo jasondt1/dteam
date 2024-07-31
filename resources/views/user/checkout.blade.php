@@ -133,7 +133,11 @@
                     @endforeach
                 </form>
                 @else
-                <a href="/store/show" class="mt-5 px-6 py-1.5 bg-[#3D4450] text-white rounded-sm hover:bg-[#474D57] text-sm">Continue Shopping</a>
+                <div class="">
+                    <div class="mt-5">Cart is empty</div>
+                    <a href="/store/show" class="block mt-5 px-6 py-1.5 bg-[#3D4450] text-white rounded-sm hover:bg-[#474D57] text-sm">Continue Shopping</a>
+                </div>
+
                 @endif
                 @if(Auth::user()->game_carts->count() != 0)
                 <div class="right w-full md:w-1/3 mt-5">
