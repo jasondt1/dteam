@@ -23,13 +23,13 @@
                     <p class="text-2xl font-semibold mb-2">Profile Background</p>
                     <p class="text-[#ADB2B7] text-sm mb-4">Choose a background to show on your profile page</p>
                     <div class="w-full">
-                        @if ($errors->any())
+                        {{-- @if ($errors->any())
                         <div class="w-full p-3 mb-6 error-msg">
                             @foreach ($errors->all() as $error)
                                 <p class="text-white text-sm" style="text-shadow: 1px 1px #5b5b5b;">{{ $error }}</p>
                             @endforeach
                         </div>
-                        @endif
+                        @endif --}}
                     </div>
                     <form id="avatar-form" action="{{ route('update-background') }}" method="POST" enctype="multipart/form-data">
                         @csrf

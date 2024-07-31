@@ -133,7 +133,7 @@
         </div>
         <input type="hidden" name="video_url" id="video_url" value="{{old('video_url')}}">
 
-        <button type="submit" class="blue-btn w-full md:max-w-40 py-2 mb-8">
+        <button type="submit" class="blue-btn w-full md:max-w-40 py-2 mb-8" id="submit-btn">
             <span class="submit-text">Submit</span>
             <div class="loader m-auto hidden"></div>
         </button>

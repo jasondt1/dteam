@@ -295,6 +295,16 @@ class UserController extends Controller
     }
 
     public function updateBackground(Request $request){
+        $rules = [
+            'image_url' => 'required',
+        ];
+
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator);
+        }
+
         $user = User::find(Auth::user()->id);
         $user->background_url = $request->image_url;
 

@@ -40,7 +40,7 @@ class GameController extends Controller
 
     public function add(Request $request){
         $rules = [
-            'game_title' => 'required',
+            'game_title' => 'required|unique:games,title',
             'game_brief_description' => 'required',
             'game_full_description' => 'required',
             'release_date' => 'required|date',
@@ -49,7 +49,7 @@ class GameController extends Controller
             'image_urls' => 'required|array|min:5',
             'original_price' => 'required|numeric',
             'age_rating' => 'required|numeric',
-            'discount_percentage' => 'numeric',
+            'discount_percentage' => 'numeric|min:0|max:100',
         ];
 
         $messages = [
@@ -99,7 +99,7 @@ class GameController extends Controller
         public function update(Request $request, $id)
     {
         $rules = [
-            'game_title' => 'required',
+            'game_title' => 'required|unique:games,title',
             'game_brief_description' => 'required',
             'game_full_description' => 'required',
             'release_date' => 'required|date',
@@ -108,7 +108,7 @@ class GameController extends Controller
             'image_urls' => 'required|array|min:5',
             'original_price' => 'required|numeric',
             'age_rating' => 'required|numeric',
-            'discount_percentage' => 'numeric',
+            'discount_percentage' => 'numeric|min:0|max:100',
         ];
 
         $messages = [

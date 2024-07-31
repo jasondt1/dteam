@@ -99,6 +99,7 @@ body {
     border-radius: 999px;
     font-size: 16px;
     margin-left: 0.5rem;
+    padding-top: 2px;
 }
 
 .friend-circle {
@@ -112,6 +113,7 @@ body {
     border-radius: 999px;
     font-size: 15px;
     margin-left: 0.5rem;
+    padding-top: 2px;
 }
 
 .friend-card:hover {

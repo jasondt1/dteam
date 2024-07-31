@@ -224,10 +224,11 @@ const uploadVideo = (video) =>
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const btn = document.getElementById("submit-btn");
+    btn.disabled = true;
     let videoUrl = "";
     let imageUrl = [];
     const file = document.getElementById("video_file").files[0];
-    console.log(allImages.length);
 
     try {
         loader.classList.remove("hidden");
