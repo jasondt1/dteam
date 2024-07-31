@@ -45,7 +45,7 @@
                             @endif
                             </div>
                             <p class="text-sm text-[#C0D4DE] mt-4">{{$review->content}}</p>
-                            <div class="text-xs text-[#91989F]">Posted on <span class="review-date">{{$review->created_at}}</span></div>
+                            <div class="text-xs text-[#91989F] mt-2">Posted on <span class="review-date">{{$review->created_at}}</span></div>
                         </div>
 
                     </div>

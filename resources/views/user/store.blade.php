@@ -28,7 +28,7 @@
                                             @endforeach
                                         </div>
                                         <p class="text-xl px-2 pt-4 pb-2">Now Available</p>
-                                        <div class="flex gap-[2px]">
+                                        <div class="flex gap-[2px] ml-[3px]">
                                             @foreach ($game->genres as $genre)
                                             <p class="text-xs py-0.5 px-1.5 bg-gray-500 max-w-max ml-1.5 rounded-sm">{{$genre->name}}</p>
                                         @endforeach

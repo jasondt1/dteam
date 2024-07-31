@@ -56,7 +56,7 @@
                                     {{ $index }}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <a href={{ route('show-publisher', ['name'=>$publisher->name]) }} class="block max-h-12 max-w-12">
+                                    <a href={{ route('show-publisher', ['name'=>$publisher->name]) }} class="block h-12 w-12">
                                         <img class="w-full h-full" src={{ $publisher->image_url }} alt="">
                                     </a>
                                 </td>

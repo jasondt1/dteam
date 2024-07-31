@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $exception)
     {
         if ($exception) {
-            // return redirect()->route('store');
+            return redirect()->route('store');
         }
 
         return parent::render($request, $exception);

@@ -10,6 +10,7 @@ use App\Models\Genre;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class GameController extends Controller
@@ -243,19 +244,23 @@ class GameController extends Controller
     public function acceptGift($id){
         $gift = GameGift::find($id);
 
+        if (!$gift) {
+            return redirect()->back()->with('error', 'Gift not found.');
+        }
+
+        $user = User::find(auth()->user()->id);
+        $user->load('game_libraries');
+
+        if ($user->game_libraries->contains('id', $gift->game_id)) {
+            return redirect()->back()->with('error', 'You already own this game.');
+        }
+
         $library = new GameLibrary();
         $library->user_id = $gift->receiver_id;
         $library->game_id = $gift->game_id;
         $library->discount_percentage = $gift->discount_percentage;
 
-        if ($library->user->game_libraries->contains('game_id', $library->game_id)) {
-            $gift->status = 1;
-            $gift->save();
-            return redirect()->back();
-        }
-
         $library->save();
-
         $gift->status = 1;
         $gift->save();
 

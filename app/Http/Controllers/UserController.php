@@ -338,16 +338,31 @@ class UserController extends Controller
         $wallets = WalletCode::where('user_id', $user->id)->get();
         $game_gifts->load('game');
 
-        $history = $game_libraries->concat($game_gifts)->sortByDesc('created_at');
-        $history->each(function ($item) {
-            $item->type = 'history';
+        $game_libraries->each(function ($item) {
+            $item->type = 'library';
+        });
+        $game_gifts->each(function ($item) {
+            $item->type = 'gift';
         });
         $wallets->each(function ($item) {
             $item->type = 'wallet';
         });
-        $merged = $history->concat($wallets);
+
+        $libraryHistory = $game_libraries->sortByDesc(function ($item) {
+            return $item->pivot->created_at;
+        });
+        $giftHistory = $game_gifts->sortByDesc('created_at');
+
+        $merged = $libraryHistory->concat($giftHistory)->concat($wallets);
+
         $sorted = $merged->sortByDesc(function ($item) {
-            return $item->type === 'history' ? $item->created_at : $item->used_at;
+            if ($item->type === 'library') {
+                return $item->pivot->created_at;
+            } elseif ($item->type === 'gift') {
+                return $item->created_at;
+            } elseif ($item->type === 'wallet') {
+                return $item->used_at;
+            }
         });
 
         $currentPage = Paginator::resolveCurrentPage();

@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.stopPropagation();
         toggleDropdown(dropdownMenu);
         closeDropdown(pendingDropdownMenu);
+        document.getElementById('inner-navbar').style.zIndex = -1;
     });
 
     pendingDropdownToggle.addEventListener('click', (e) => {
