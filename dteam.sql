@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jul 2024 pada 17.42
+-- Waktu pembuatan: 31 Jul 2024 pada 05.03
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -341,8 +341,7 @@ INSERT INTO `friendlists` (`id`, `created_at`, `updated_at`, `user_id_1`, `user_
 (101, '2024-07-22 08:37:45', '2024-07-22 08:37:45', 5, 156),
 (102, '2024-07-22 08:37:45', '2024-07-22 08:37:45', 5, 157),
 (103, '2024-07-22 08:37:45', '2024-07-22 08:37:45', 5, 158),
-(104, '2024-07-22 08:37:45', '2024-07-22 08:37:45', 5, 159),
-(105, '2024-07-22 08:37:45', '2024-07-22 08:37:45', 5, 160);
+(104, '2024-07-22 08:37:45', '2024-07-22 08:37:45', 5, 159);
 
 -- --------------------------------------------------------
 
@@ -892,11 +891,9 @@ CREATE TABLE IF NOT EXISTS `game_reviews` (
 --
 
 INSERT INTO `game_reviews` (`id`, `created_at`, `updated_at`, `game_id`, `user_id`, `rating_type_id`, `content`) VALUES
-(1, '2024-07-09 23:30:09', '2024-07-09 23:30:09', 7, 5, 1, 'Good Game'),
-(2, '2024-07-09 23:50:53', '2024-07-09 23:50:53', 10, 5, 2, 'Copy Pokemon'),
-(3, '2024-07-18 23:34:49', '2024-07-18 23:34:49', 8, 5, 1, 'abc'),
-(4, '2024-07-18 23:34:53', '2024-07-18 23:34:53', 8, 5, 1, 'abc'),
-(5, '2024-07-18 23:34:56', '2024-07-18 23:34:56', 8, 5, 2, 'abcd');
+(1, '2024-07-09 23:30:09', '2024-07-09 23:30:09', 7, 5, 1, 'Just finished \'Elden Ring\' and it’s amazing! The open world is huge and stunning, the combat is intense and satisfying, and the lore is fascinating. It\'s tough but incredibly rewarding. Definitely one of my favorite games!'),
+(2, '2024-07-09 23:50:53', '2024-07-09 23:50:53', 10, 5, 2, 'Palworld seemed promising, but it’s pretty underwhelming. The graphics are mediocre, and the gameplay gets repetitive fast. I’ve also encountered several bugs and performance issues. It’s not what I hoped for and feels like it needs a lot more polish.'),
+(3, '2024-07-18 23:34:49', '2024-07-18 23:34:49', 8, 5, 1, 'The Last of Us is a masterpiece. The story is gripping and emotional, the characters are well-developed, and the gameplay is both intense and rewarding. It\'s a must-play for any gamer.');
 
 -- --------------------------------------------------------
 
