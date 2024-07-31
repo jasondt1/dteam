@@ -6,10 +6,10 @@
 @section('content')
     <div class="container min-w-full">
         <div class="profile-top w-full -mt-8">
-            <div class="profile-pic">
+            <div class="profile-pic cursor-pointer" onclick="navigate('/profile/{{Auth::user()->unique_code}}')">
                 <img src={{ Auth::user()->profile_picture_url }}>
             </div>
-            <div class="text-2xl font-light mb-1 text-white">{{ Auth::user()->nickname }} <span class="text-xs mx-1 text-[#828282]">>></span> <span class="text-sm">My Transaction</span></div>
+            <div class="text-2xl font-light mb-1 text-white cursor-pointer" onclick="navigate('/profile/{{Auth::user()->unique_code}}')">{{ Auth::user()->nickname }} <span class="text-xs mx-1 text-[#828282]">>></span> <span class="text-sm">My Transaction</span></div>
         </div>
         <div class="friend mt-4 flex gap-6 flex-col md:flex-row">
             <div class="flex flex-col w-full">
