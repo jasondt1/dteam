@@ -8,8 +8,8 @@
         <div class="friend-container -mt-8">
             <div class="title py-7 flex gap-6 items-center">
                 <div class="w-16 h-16">
-                    <a href={{ route('profile', ['id'=>$user->unique_code]) }}>
-                        <img class="profile-border" src={{$user->profile_picture_url}} alt="">
+                    <a class="w-full h-full" href={{ route('profile', ['id'=>$user->unique_code]) }}>
+                        <img class="profile-border w-full h-full" src={{$user->profile_picture_url}} alt="">
                     </a>
                 </div>
                 <a href={{ route('profile', ['id'=>$user->unique_code]) }}>

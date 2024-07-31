@@ -8,8 +8,8 @@
         <div class="friend-container -mt-8">
             <div class="title py-7 flex gap-6 items-center">
                 <div class="w-16 h-16">
-                    <a href={{ route('profile', ['id'=>$user->unique_code]) }}>
-                        <img class="profile-border" src={{$user->profile_picture_url}} alt="">
+                    <a class="w-full h-full" href={{ route('profile', ['id'=>$user->unique_code]) }}>
+                        <img class="profile-border w-full h-full" src={{$user->profile_picture_url}} alt="">
                     </a>
                 </div>
                 <a href={{ route('profile', ['id'=>$user->unique_code]) }}>
@@ -77,7 +77,7 @@
                     <div id="result" class="bg-[#243543] py-3 px-4 flex-col gap-4">
                         <div class="flex justify-between gap-4 flex-col md:flex-row mt-2">
                             <div class="flex gap-4">
-                                <div class="w-[5.5rem] h-[5.5rem]"><img id="search_pic" src={{$u->profile_picture_url}} alt=""></div>
+                                <div class="w-[5.5rem] h-[5.5rem]"><img class="w-full h-full" id="search_pic" src={{$u->profile_picture_url}} alt=""></div>
                                 <div class="flex flex-col">
                                     <p id="search_nickname">{{$u->nickname}}</p>
                                     <a href={{ route('profile', ['id'=>$u->unique_code]) }} id="search_link" class="text-[#54B6F9] text-sm">Profile Link</a>

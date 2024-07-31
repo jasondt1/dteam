@@ -115,7 +115,7 @@
                                 <div class="">
                                     <input type="hidden" id="recipient-id-{{$game->id}}" name="gift_recipient_id[{{$game->id}}]">
                                     <p class="mb-1">Gift Message:</p>
-                                    <textarea name="gift_message[{{$game->id}}]" class="w-full bg-[#292F38] resize-none border border-[#161D26] rounded h-20 outline-none p-2"></textarea>
+                                    <textarea spellcheck="false" name="gift_message[{{$game->id}}]" class="w-full bg-[#292F38] resize-none border border-[#161D26] rounded h-20 outline-none p-2"></textarea>
                                 </div>
                                 <div class="flex gap-2 items-center">
                                     <p>From:</p>

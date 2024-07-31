@@ -54,7 +54,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://media.discordapp.net/attachments/1266980441123196930/1267081494199795834/download_3.png?ex=66a77d19&is=66a62b99&hm=99698b7eefe58c947d248ff75c07602a47c2998ba8b0f51b5aa97bfecd23d4b5&=&format=webp&quality=lossless&width=2160&height=654" alt="Logo" width="250" height="75">
+            <img src="https://media.discordapp.net/attachments/735719868686401638/1268008221394604072/unnamed.jpg?ex=66aadc2e&is=66a98aae&hm=27e53e8b7e22d778ea536bb48e0521956c290e71429846b421eb6a4f8f62513a&=&format=webp&width=2160&height=654" alt="Logo" width="250" height="75">
         </div>
         <div class="content">
             <h1>{{ $details['title'] }}</h1>
