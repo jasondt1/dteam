@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Jul 2024 pada 05.03
+-- Waktu pembuatan: 31 Jul 2024 pada 05.22
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -468,16 +468,14 @@ CREATE TABLE IF NOT EXISTS `game_carts` (
   PRIMARY KEY (`id`),
   KEY `game_carts_game_id_foreign` (`game_id`),
   KEY `game_carts_user_id_foreign` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=268 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=270 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `game_carts`
 --
 
 INSERT INTO `game_carts` (`id`, `created_at`, `updated_at`, `game_id`, `user_id`, `is_gift`) VALUES
-(265, '2024-07-25 09:20:14', '2024-07-25 09:20:14', 10, 5, 1),
-(266, '2024-07-25 20:47:53', '2024-07-25 20:47:53', 26, 5, 0),
-(267, '2024-07-26 03:22:55', '2024-07-26 03:22:55', 25, 5, 1);
+(269, '2024-07-30 20:10:46', '2024-07-30 20:10:46', 10, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -844,7 +842,7 @@ CREATE TABLE IF NOT EXISTS `game_libraries` (
   PRIMARY KEY (`id`),
   KEY `game_libraries_game_id_foreign` (`game_id`),
   KEY `game_libraries_user_id_foreign` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `game_libraries`
@@ -863,7 +861,8 @@ INSERT INTO `game_libraries` (`id`, `created_at`, `updated_at`, `game_id`, `user
 (38, '2024-07-24 04:11:59', '2024-07-24 04:11:59', 21, 5, 0),
 (39, '2024-07-24 04:11:59', '2024-07-24 04:11:59', 11, 5, 0),
 (40, '2024-07-24 04:11:59', '2024-07-24 04:11:59', 7, 5, 0),
-(41, '2024-07-25 02:34:17', '2024-07-25 02:34:17', 19, 5, 50);
+(41, '2024-07-25 02:34:17', '2024-07-25 02:34:17', 19, 5, 50),
+(42, '2024-07-30 20:04:11', '2024-07-30 20:04:11', 8, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -884,7 +883,7 @@ CREATE TABLE IF NOT EXISTS `game_reviews` (
   KEY `game_reviews_game_id_foreign` (`game_id`),
   KEY `game_reviews_user_id_foreign` (`user_id`),
   KEY `game_reviews_rating_type_id_foreign` (`rating_type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `game_reviews`
@@ -893,7 +892,7 @@ CREATE TABLE IF NOT EXISTS `game_reviews` (
 INSERT INTO `game_reviews` (`id`, `created_at`, `updated_at`, `game_id`, `user_id`, `rating_type_id`, `content`) VALUES
 (1, '2024-07-09 23:30:09', '2024-07-09 23:30:09', 7, 5, 1, 'Just finished \'Elden Ring\' and it’s amazing! The open world is huge and stunning, the combat is intense and satisfying, and the lore is fascinating. It\'s tough but incredibly rewarding. Definitely one of my favorite games!'),
 (2, '2024-07-09 23:50:53', '2024-07-09 23:50:53', 10, 5, 2, 'Palworld seemed promising, but it’s pretty underwhelming. The graphics are mediocre, and the gameplay gets repetitive fast. I’ve also encountered several bugs and performance issues. It’s not what I hoped for and feels like it needs a lot more polish.'),
-(3, '2024-07-18 23:34:49', '2024-07-18 23:34:49', 8, 5, 1, 'The Last of Us is a masterpiece. The story is gripping and emotional, the characters are well-developed, and the gameplay is both intense and rewarding. It\'s a must-play for any gamer.');
+(6, '2024-07-30 20:09:49', '2024-07-30 20:09:49', 8, 5, 1, 'The Last of Us is a masterpiece. The story is gripping and emotional, the characters are well-developed, and the gameplay is both intense and rewarding. It\'s a must-play for any gamer.');
 
 -- --------------------------------------------------------
 
@@ -1195,7 +1194,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `users_country_id_foreign` (`country_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=224 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=228 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data untuk tabel `users`
@@ -1206,7 +1205,7 @@ INSERT INTO `users` (`id`, `created_at`, `updated_at`, `nickname`, `real_name`, 
 (2, '2024-07-08 21:58:16', '2024-07-26 02:49:39', NULL, NULL, 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'tanuartadjason@gmail.com', '$2y$10$e/X8WB114szUx2QuXmPwIuYIT5lm36p8HvnVQO6r2bVE7h396y7rW', 'publisher', NULL, '4567890123', NULL, 0, 1000, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', 'PJMr4X5CD1qMV6rA7aBmBJOLHZC7YNZLRYU4FR7TkWpfrkkRyy2VjXjwpMB7'),
 (3, '2024-07-08 22:14:54', '2024-07-08 22:14:54', 'jasondt', NULL, 'https://avatars.akamai.steamstatic.com/af1cf9cf15be50bc6eda5a5c35bb1698bbf77ecd_full.jpg', 'tanuartadjason@gmail.com', '$2y$10$DCtA6PbAvdhU2whKAlQF0OQvOgQXHY8yRdOOOqigJRwHHE1H562k6', 'publisher', NULL, '3456789012', NULL, 0, 1000, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
 (4, '2024-07-08 22:14:54', '2024-07-08 22:14:54', NULL, NULL, 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'jason@gmail.com', '$2y$10$0nHWP2l0JyY09a1i6t3B3eEEk6w0ZQ.wVIN9RaKEFgntY8hURAqwm', 'admin', NULL, '2345678901', NULL, 0, 1000, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
-(5, '2024-07-08 23:07:47', '2024-07-28 08:41:51', 'jasondt', 'Jason Daniel', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/c59f1f3beafa934af92b51dcd0521298600239fb.gif', 'dteamslc@gmail.com', '$2y$10$95DAtIuHgcJrU2BNp.yKdOQK9tNDtFXJNFnDnVgJ1C/Ach.C.yEbS', 'user', NULL, '1234567890', 17, 16688034, 54840, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1', NULL),
+(5, '2024-07-08 23:07:47', '2024-07-30 20:04:11', 'jasondt', 'Jason Daniel', 'https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2055050/c59f1f3beafa934af92b51dcd0521298600239fb.gif', 'dteamslc@gmail.com', '$2y$10$95DAtIuHgcJrU2BNp.yKdOQK9tNDtFXJNFnDnVgJ1C/Ach.C.yEbS', 'user', NULL, '1234567890', 17, 15888034, 62840, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1', NULL),
 (6, '2024-07-14 23:21:00', '2024-07-15 03:16:48', 'user2', 'useruser', 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'zukar2i151@gmail.com', '$2y$10$tlREhPhFtJCeeuHO0EmKuOvajg5pLv2KH4mkie7w9APlxChllh0BC', 'user', 'ds', '0227658205', 18, 0, 0, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
 (7, '2024-07-16 00:46:57', '2024-07-16 00:46:57', NULL, NULL, NULL, 'rickywijayaplay@gmail.com', '$2y$10$YNKoilmgjbQh9YmbNjTlLeWeQPylzGvh8nyog9ulyhizvYh..94u2', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, NULL),
 (8, '2024-07-16 03:17:45', '2024-07-16 03:18:09', 'user3', 'useruser', 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'miyukdisaber@gmail.com', '$2y$10$BZb6NDuMYx7F0/n3esfJOua5olPeTVVPOIN5cU8aNnYzhduTdvSIe', 'user', NULL, '4012941475', 29, 0, 0, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/bf7539d121e6733f868ecafb4b2f21626af9de9a.gif?alt=media&token=9abdf96d-e7f5-4ead-9daf-fd01760baaac', NULL),
@@ -1319,7 +1318,9 @@ INSERT INTO `users` (`id`, `created_at`, `updated_at`, `nickname`, `real_name`, 
 (217, '2024-07-28 02:06:32', '2024-07-28 02:06:32', NULL, NULL, NULL, 'jason.tanuarta@binus.edu', '$2y$10$4EtIz6xCMxra0RnNnRvzt.SekmPgXzuMFeDHC9eIfJPy75scmWJCu', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, NULL),
 (218, '2024-07-28 04:38:38', '2024-07-28 04:38:38', NULL, NULL, NULL, 'jason230603@gmail.com', '$2y$10$d09q0zmbLv.XQoUonPut2OoUsbEG04YitrRm40Io2rlLMe67bhhWi', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, NULL),
 (219, '2024-07-28 04:41:02', '2024-07-28 04:41:02', NULL, NULL, NULL, 'jason.151@outlook.com', '$2y$10$1OyhNH9DCMC3k5MQqwxRVuCBEkaGDDIL6U.RWvCOYbqmNXs7HBTi6', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, NULL),
-(223, '2024-07-28 04:47:09', '2024-07-28 08:16:33', NULL, NULL, NULL, 'miyukisaber@gmail.com', '$2y$10$fpGk.IklzJXBgIyLKl7b3eCV8JSoVLj/mHCw8zYYhX4/Sb5r/qCQe', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, '7tktPlNJMZ6k0krpRaI0PiQ7AJnY5ZybWzRjbhHUsG0tuoong3JvUm5tIpLU');
+(223, '2024-07-28 04:47:09', '2024-07-28 08:16:33', NULL, NULL, NULL, 'miyukisaber@gmail.com', '$2y$10$fpGk.IklzJXBgIyLKl7b3eCV8JSoVLj/mHCw8zYYhX4/Sb5r/qCQe', 'publisher', NULL, NULL, NULL, 0, NULL, NULL, '7tktPlNJMZ6k0krpRaI0PiQ7AJnY5ZybWzRjbhHUsG0tuoong3JvUm5tIpLU'),
+(225, '2024-07-30 20:17:53', '2024-07-30 20:17:53', NULL, NULL, 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'dteam_admin@gmail.com', '$2y$10$ZIsMBumhXTLWTv/DgSRyre8xByYM/S819IVphFFPYA3qScmTlHGn.', 'admin', NULL, '0014933854', NULL, 0, 0, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1', NULL),
+(226, '2024-07-30 20:18:40', '2024-07-30 20:18:40', NULL, NULL, 'https://steamuserimages-a.akamaihd.net/ugc/868480752636433334/1D2881C5C9B3AD28A1D8852903A8F9E1FF45C2C8/', 'dteam_publisher@gmail.com', '$2y$10$ZIsMBumhXTLWTv/DgSRyre8xByYM/S819IVphFFPYA3qScmTlHGn.', 'publisher', NULL, '8596278629', NULL, 0, 0, 'https://firebasestorage.googleapis.com/v0/b/dteam-29297.appspot.com/o/items%2Fashen_hush.gif?alt=media&token=a877b90b-c8f8-4c19-b91a-c4e7b6311bb1', NULL);
 
 -- --------------------------------------------------------
 
