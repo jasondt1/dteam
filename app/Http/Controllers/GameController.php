@@ -226,13 +226,26 @@ class GameController extends Controller
     }
 
     public function viewStore(){
-        $popularGames = Game::withCount('game_libraries')->orderBy('game_libraries_count', 'desc')->take(20)->get();
-        $discountedGames = Game::where('discount_percentage', '>', 0)->take(20)->get();
+        try {
+            $popularGames = Game::withCount('game_libraries')
+                ->orderBy('game_libraries_count', 'desc')
+                ->take(20)
+                ->get();
+            $discountedGames = Game::where('discount_percentage', '>', 0)
+                ->take(20)
+                ->get();
 
-        $popularGames = $popularGames->shuffle()->take(10);
-        $discountedGames = $discountedGames->shuffle()->take(10);
+            $popularGames = $popularGames->shuffle()->take(10);
+            $discountedGames = $discountedGames->shuffle()->take(10);
 
-        $genres = Genre::where('is_active', true)->get();
+            $genres = Genre::where('is_active', true)->get();
+        } catch (\Throwable $e) {
+            \Log::error('Failed to load store', ['error' => $e->getMessage()]);
+            $popularGames = collect();
+            $discountedGames = collect();
+            $genres = collect();
+        }
+
         return view('user/store', compact('popularGames', 'discountedGames', 'genres'));
     }
 

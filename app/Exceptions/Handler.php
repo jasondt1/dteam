@@ -51,10 +51,12 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $exception)
     {
-        if ($exception) {
+        // Only redirect on specific, expected cases (e.g., wrong HTTP method)
+        if ($exception instanceof MethodNotAllowedHttpException) {
             return redirect()->route('store');
         }
 
+        // Defer to Laravel's default handling so real errors are visible/logged
         return parent::render($request, $exception);
     }
 }
