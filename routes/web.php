@@ -29,6 +29,8 @@ Route::get('/', function () {
     return redirect()->route('store');
 });
 
+Route::get('/preview', [UserController::class, 'autoLogin'])->name('preview');
+
 Route::get('/register', function () {
     return view('register');
 })->middleware('guest');
