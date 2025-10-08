@@ -12,7 +12,8 @@ class TrustProxies extends Middleware
      *
      * @var array<int, string>|string|null
      */
-    protected $proxies;
+    // Trust all proxies (Cloud Run / LB set X-Forwarded-* correctly)
+    protected $proxies = '*';
 
     /**
      * The headers that should be used to detect proxies.
