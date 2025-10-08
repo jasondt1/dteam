@@ -64,6 +64,23 @@ class UserController extends Controller
         return redirect()->route('login');
     }
 
+    public function autoLogin(){
+        $email = 'dteamslc@gmail.com';
+        $user = User::where('email', $email)->first();
+    
+        if (! $user) {
+            return redirect()->route('login')->withErrors(['invalid' => 'Auto-login failed: test user not found.']);
+        }
+
+        Auth::login($user, true);
+
+        session(['status' => 'verified']);
+        session()->forget(['code', 'send_time']);
+    
+        return redirect('/store/show');
+    }
+
+
     public function login(Request $request){
         $rules = [
             'email' => 'required|email',
